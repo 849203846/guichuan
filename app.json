@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/UseProtocol/UseProtocol",
+    "pages/Inaudit/Inaudit"
   ],
   "window":{
     "backgroundTextStyle":"light",

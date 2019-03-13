@@ -8,3 +8,15 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+view, text {
+  font-size: 14px;
+}
+.submitbtn{
+  width: 80%;
+  height: 88rpx;
+  background: lightblue;
+  border-radius: 25px;
+  line-height: 88rpx;
+  text-align: center;
+  border: none;
+}
