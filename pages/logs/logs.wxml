@@ -4,3 +4,5 @@
     <text class="log-item">{{index + 1}}. {{log}}</text>
   </block>
 </view>
+
+<button open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo" lang="zh_CN">授权</button>

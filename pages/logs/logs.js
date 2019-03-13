@@ -6,10 +6,16 @@ Page({
     logs: []
   },
   onLoad: function () {
-    this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(log => {
-        return util.formatTime(new Date(log))
-      })
+
+  },
+  bindgetuserinfo(e){
+    console.log(e)
+    wx.setStorage({
+      key: 'userInfo',
+      data: e.detail.userInfo,
+    })
+    wx.navigateBack({
+      delta:1
     })
   }
 })
