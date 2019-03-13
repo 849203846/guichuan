@@ -3,11 +3,11 @@
   <view class='top-title'>驾驶证信息</view>
   <view>
     <view class='top-input'>
-      <text class='left-title'>司机姓名:</text>
+      <text class='left-title'>车主姓名:</text>
       <input placeholder='请输入...'></input>
     </view>
     <view class='top-input'>
-      <text  class='left-title'>司机电话:</text>
+      <text  class='left-title'>车主电话:</text>
       <input placeholder='请输入...'></input>
     </view>
     <view class='top-input'>
@@ -18,12 +18,11 @@
   <view class='top-title'>行驶证信息</view>
   <view>
     <view class='top-input'>
-      <text  class='left-title'>车牌号:</text>
-      
+      <text  class='left-title'>车型:</text>
       <input placeholder='请输入...'></input>
     </view>
     <view class='top-input'>
-      <text  class='left-title'>车型:</text>
+      <text  class='left-title'>车牌号:</text>
       <input placeholder='请输入...'></input>
     </view>
     <view class='top-input'>
@@ -39,5 +38,5 @@
       <input placeholder='请输入...'></input>
     </view>
   </view>
-  <button class='submitbtn' bindtap='btnSubmit'>提价</button>
+  <button class='submitbtn' bindtap='btnSubmit'>提交</button>
 </view>
