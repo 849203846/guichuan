@@ -1,0 +1,20 @@
+.UseProtocol{
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  font-size: 14px;
+}
+.UseProtocol .h3{
+  font-size: 16px;
+  display: block;
+  font-weight: bold;
+}
+.UseProtocol .b{
+  font-weight: bold;
+}
+.UseProtocol .hei{
+  height: 10rpx;
+}
+.UseProtocol .hei2{
+  height: 15rpx;
+}
