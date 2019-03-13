@@ -3,16 +3,40 @@
   <view class='top-title'>驾驶证信息</view>
   <view>
     <view class='top-input'>
-      <text>司机姓名:</text>
-      <input></input>
+      <text class='left-title'>司机姓名:</text>
+      <input placeholder='请输入...'></input>
     </view>
     <view class='top-input'>
-      <text>司机电话:</text>
-      <input></input>
+      <text  class='left-title'>司机电话:</text>
+      <input placeholder='请输入...'></input>
     </view>
     <view class='top-input'>
-      <text>身份证号:</text>
-      <input></input>
+      <text  class='left-title'>身份证号:</text>
+      <input placeholder='请输入...'></input>
+    </view>
+  </view>
+  <view class='top-title'>行驶证信息</view>
+  <view>
+    <view class='top-input'>
+      <text  class='left-title'>车牌号:</text>
+      
+      <input placeholder='请输入...'></input>
+    </view>
+    <view class='top-input'>
+      <text  class='left-title'>车型:</text>
+      <input placeholder='请输入...'></input>
+    </view>
+    <view class='top-input'>
+      <text  class='left-title'>车辆颜色:</text>
+      <input placeholder='请输入...'></input>
+    </view>
+    <view class='top-input'>
+      <text  class='left-title'>车辆所有人:</text>
+      <input placeholder='请输入...'></input>
+    </view>
+    <view class='top-input'>
+      <text  class='left-title'>车辆注册日期:</text>
+      <input placeholder='请输入...'></input>
     </view>
   </view>
   <button class='submitbtn' bindtap='btnSubmit'>提价</button>
