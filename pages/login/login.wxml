@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<view>
+  <view class='top-input'>
+      <text class='left-title'>用户名:</text>
+      <input placeholder='请输入用户名...'></input>
+  </view>
+  <view class='top-input'>
+      <text class='left-title'>密码:</text>
+      <input password='true' placeholder='请输入密码...'></input>
+  </view>
+  <view class='flooter-btn'>
+    <button type='primary'>登录</button>
+  </view>
+</view>

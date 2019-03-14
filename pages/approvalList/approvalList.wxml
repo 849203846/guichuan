@@ -1,0 +1,16 @@
+<!--pages/approvalList/approvalList.wxml-->
+<view>
+  <view class='top'>
+    <button class='approval-btn-left' bindtap='btnSubmit'>会员审核</button>
+    <button class='approval-btn-right' bindtap='btnSubmit'>车主认证</button>
+  </view>
+  <view>
+    <view class='list-msg'>
+      <view class='list-msg-left'>
+        <view>会员姓名</view>
+        <view>手机号</view>
+      </view>
+      <navigator class='list-msg-right'>查看详情</navigator>
+    </view>
+  </view>
+</view>

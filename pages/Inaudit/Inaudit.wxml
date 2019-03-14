@@ -1,1 +1,7 @@
-审核中
+<view>
+  <image src='./img/success.svg' class='img-ico'></image>
+  <view class='submit-text'>
+    <view>您的信息已经提交成功</view>
+    <text>请耐心等待系统的审核，具体结果以短信接收为准</text>
+  </view>
+</view>

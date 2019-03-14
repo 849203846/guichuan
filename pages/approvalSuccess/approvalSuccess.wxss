@@ -1,4 +1,4 @@
-/* pages/Inaudit/Inaudit.wxss */
+/* pages/approvalSuccess/approvalSuccess.wxss */
 .img-ico{
   display: block;
   width:200rpx;

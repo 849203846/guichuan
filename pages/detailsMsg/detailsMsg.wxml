@@ -1,0 +1,48 @@
+<!--pages/detailsMsg/detailsMsg.wxml-->
+<!--index.wxml-->
+<view>
+  <view class='top-title'>驾驶证信息</view>
+  <view>
+    <view class='top-input'>
+      <text class='left-title'>车主姓名:</text>
+      <text>小胡子语法</text>
+    </view>
+    <view class='top-input'>
+      <text  class='left-title'>车主电话:</text>
+      <text>小胡子语法</text>
+    </view>
+    <view class='top-input'>
+      <text  class='left-title'>身份证号:</text>
+     <text>小胡子语法</text>
+    </view>
+  </view>
+  <view class='top-title'>行驶证信息</view>
+  <view>
+    <view class='top-input'>
+      <text  class='left-title'>车型:</text>
+      <text>小胡子语法</text>
+    </view>
+    <view class='top-input'>
+      <text  class='left-title'>车牌号:</text>
+      <text>小胡子语法</text>
+    </view>
+    <view class='top-input'>
+      <text  class='left-title'>车辆颜色:</text>
+      <text>小胡子语法</text>
+    </view>
+    <view class='top-input'>
+      <text  class='left-title'>车辆所有人:</text>
+      <text>小胡子语法</text>
+    </view>
+    <view class='top-input'>
+      <text  class='left-title'>车辆注册日期:</text>
+      <text>小胡子语法</text>
+    </view>
+  </view>
+  <view class='flooter-btn'>
+    <button type='primary' class='flooter-btn-left'>审批通过</button>
+    <button type='warn' class='flooter-btn-right'>审批拒绝</button>
+  </view>
+</view>
+
+

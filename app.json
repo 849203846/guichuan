@@ -1,15 +1,19 @@
 {
-  "pages":[
-
+  "pages": [
+    "pages/login/login",
+    "pages/approvalReject/approvalReject",
+    "pages/approvalSuccess/approvalSuccess",
+    "pages/detailsMsg/detailsMsg",
+    "pages/approvalList/approvalList",
     "pages/index/index",
     "pages/logs/logs",
     "pages/UseProtocol/UseProtocol",
     "pages/Inaudit/Inaudit"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "妫川出行",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }
