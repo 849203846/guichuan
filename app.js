@@ -16,9 +16,9 @@ App({
       success: res => {
         console.log(res.code)
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        feach('http://cx.bjlingdi.com/api/Base/getWeixinOpenid', 'get', { js_code:res.code})
+        feach('/api/Base/getWeixinOpenid', 'get', { js_code:res.code})
         .then(res=>{
-          this.globalData.user_id = res.data.data
+          wx.setStorageSync('openid', res.data.data)
           this.GetuserInfo()
         })
       }
@@ -29,6 +29,10 @@ App({
     console.log(userInfo)
      if (userInfo){
         wx.hideLoading();
+       feach('/api/Base/setUserData', 'post', userInfo)
+       .then(res=>{
+         console.log(res);
+       })
      }else{
        wx.getUserInfo({
          withCredentials:true,
@@ -54,6 +58,7 @@ App({
      }
   },
   globalData: {
-    user_id: null
+    user_id: null,
+    openid:''
   }
 })

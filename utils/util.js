@@ -1,14 +1,22 @@
-
+let globalurl = 'http://cx.bjlingdi.com'
 const feach = (url, method,data) => {
   return new Promise(function(res,rej){
-    wx.request({
-      url,
+    data.openid = wx.getStorageSync('openid').openid
+    let reqDate = {
+      url: globalurl + url,
       data,
       method,
-      success:res,
-      fail:rej
-    })
+      success: res,
+      fail: rej
+    }
+    if (method === 'post' || method === 'POST'){
+      reqDate.header = {
+        'content-type': 'application/x-www-form-urlencoded'
+      }
+    }
+    wx.request(reqDate)
   })
+ 
 }
 /*获取当前页url*/
 function getCurrentPageUrl() {
