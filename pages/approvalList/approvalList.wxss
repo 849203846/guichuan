@@ -1,34 +1,40 @@
 /* pages/approvalList/approvalList.wxss */
 .top{
   width: 100%;
+  display: flex;
   text-align: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5rpx;
+  height: 60rpx;
+  line-height: 60rpx;
 }
 
 .approval-btn-left{
   display: inline-block;
-  width: 40%;
-  margin: 10rpx;
+  flex:1;
 }
 
 .approval-btn-right{
   display: inline-block;
-  width: 40%;
-   margin: 10rpx;
+  flex: 1;
 }
 .list-msg{
   display: flex;
-  height: 88rpx;
-  background: rgb(189, 189, 189)
+  height: 100rpx;
+  border: 1px solid #bababa;
 }
 .list-msg-left{
-  flex: 1;
+  flex: 2;
 }
 .list-msg-left view {
   padding-left: 20rpx;
-  line-height: 44rpx;
+  line-height: 50rpx;
 }
 .list-msg-right{
   flex: 1;
-  padding-left: 100rpx;
+  padding-right: 10px;
   line-height: 88rpx;
+}
+.tabflag{
+  background: #bababa
 }

@@ -1,16 +1,16 @@
 <!--pages/approvalList/approvalList.wxml-->
 <view>
   <view class='top'>
-    <button class='approval-btn-left' bindtap='btnSubmit'>会员审核</button>
-    <button class='approval-btn-right' bindtap='btnSubmit'>车主认证</button>
+    <view class="approval-btn-left {{tabFlag==1?'tabflag':''}}" data-tab="1" bindtap='tab'>会员审核</view>
+    <view class="approval-btn-left {{tabFlag==2?'tabflag':''}}" data-tab="2" bindtap='tab'>车主认证</view>
   </view>
-  <view>
-    <view class='list-msg'>
+  <block wx:for="{{list}}">
+    <navigator class='list-msg' url='../detailsMsg/detailsMsg?id={{item.id}}'>
       <view class='list-msg-left'>
-        <view>会员姓名</view>
-        <view>手机号</view>
+        <view>姓名：{{item.real_name}}</view>
+        <view>手机号：{{item.mobile}}</view>
       </view>
-      <navigator class='list-msg-right'>查看详情</navigator>
-    </view>
-  </view>
+      <view class='list-msg-right'>{{item.status==1?'未审核':item.status==2?'汽车认证通过':item.status==3?'顺风车资格认证通过':item.status==4?'汽车认证不通过':'顺风车不通过'}}</view>
+    </navigator>
+  </block>
 </view>
