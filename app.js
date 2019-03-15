@@ -14,7 +14,6 @@ App({
     // 登录
     wx.login({
       success: res => {
-        console.log(res.code)
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         feach('/api/Base/getWeixinOpenid', 'get', { js_code:res.code})
         .then(res=>{
@@ -26,7 +25,6 @@ App({
   },
    GetuserInfo(){
     let userInfo =  wx.getStorageSync('userInfo')
-    console.log(userInfo)
      if (userInfo){
         wx.hideLoading();
        feach('/api/Base/setUserData', 'post', userInfo)
@@ -59,6 +57,7 @@ App({
   },
   globalData: {
     user_id: null,
-    openid:''
+    openid:'',
+    url : 'http://cx.bjlingdi.com'
   }
 })

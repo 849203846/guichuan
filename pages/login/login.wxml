@@ -6,13 +6,13 @@
   </view>
   <view class='top-input'>
       <text class='left-title'>用户名:</text>
-      <input placeholder='请输入用户名...'></input>
+      <input bindinput='usernameInput' placeholder='请输入用户名...'></input>
   </view>
   <view class='top-input password-input'>
       <text class='left-title'>密码:</text>
-      <input password='true' placeholder='请输入密码...'></input>
+      <input password='true' bindinput='passwordInput' placeholder='请输入密码...'></input>
   </view>
   <view class='flooter-btn'>
-    <button type='primary'>登录</button>
+    <button type='primary' bindtap='login'>登录</button>
   </view>
 </view>

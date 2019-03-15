@@ -1,66 +1,48 @@
 // pages/detailsMsg/detailsMsg.js
+import {
+  feach
+} from '../../utils/util.js'
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    id:'',
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad:function(options){
+    this.setData({
+      id: options.id
+    })
+    this.detailsDate(options.id);
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  detailsDate:function(id){
+    let data = {
+      id: id,
+    }
+    feach('/admin/Driver/getDriverData','get',data)
+    .then(res=>{
+      console.log(res.data.data)
+      this.setData({
+        ...res.data.data
+      })
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  flooterbtn(){
+    let data = {
+       id:this.data.id,
+      status:'1'
+    }
+    feach('/admin/Driver/updateDriverStatus','get',data)
+    .then(res=>{
+      console.log(res.data.code)
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  flooternotbtn(){
+    let data = {
+      id: this.data.id,
+      status: '2',
+      marker: this.data.marker
+    }
+    feach('/admin/Driver/updateDriverStatus', 'get', data)
+      .then(res => {
+        console.log(res)
+      })
   }
 })

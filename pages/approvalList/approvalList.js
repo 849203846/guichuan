@@ -1,66 +1,42 @@
 // pages/approvalList/approvalList.js
+import {
+  feach
+} from '../../utils/util.js'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    tabFlag:'1',
+    page:1,
+    mobile:'',
+    list:[],
+    car_mum:''
+  },
+  tab:function(e){
+    console.log(e.target.dataset.tab)
+    this.setData({
+      tabFlag: e.target.dataset.tab
+    })
+    this.onShow()
+  },
+  onShow: function (options) {
+    let data = {
+      page: this.data.page,
+      status: this.data.tabFlag,
+      mobile: this.data.mobile,
+      car_mum: this.data.car_mum,
+    }
+    feach('/admin/Driver/getDriverByStatus','get',data)
+    .then(res=>{
+      console.log(res.statusCode);
+      if(res.statusCode===200){
+        this.setData({
+          list:res.data.data.list
+        })
+      }
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })
