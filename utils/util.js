@@ -1,9 +1,9 @@
-let globalurl = 'http://cx.bjlingdi.com'
 const feach = (url, method,data) => {
   return new Promise(function(res,rej){
     data.openid = wx.getStorageSync('openid').openid
+    var app = getApp()
     let reqDate = {
-      url: globalurl + url,
+      url: app.globalData.url  + url,
       data,
       method,
       success: res,

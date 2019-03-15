@@ -59,6 +59,7 @@ App({
   },
   globalData: {
     user_id: null,
-    openid:''
+    openid:'',
+    url : 'http://cx.bjlingdi.com'
   }
 })

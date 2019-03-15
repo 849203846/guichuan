@@ -10,12 +10,6 @@ Page({
     car_color: '',
     car_register: '',
   },
-  onLoad: function() {
-    //   feach('www.baidu.com','get',{})
-    //   .then(res=>{
-    //     console.log(res)
-    //   })
-  },
   SaveCar_register(e) {
     this.setData({
       car_register: e.detail.value
