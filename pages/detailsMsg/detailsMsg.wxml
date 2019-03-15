@@ -5,43 +5,43 @@
   <view>
     <view class='top-input'>
       <text class='left-title'>车主姓名:</text>
-      <text>小胡子语法</text>
+      <text>{{real_name}}</text>
     </view>
     <view class='top-input'>
       <text  class='left-title'>车主电话:</text>
-      <text>小胡子语法</text>
+      <text>{{mobile}}</text>
     </view>
     <view class='top-input'>
       <text  class='left-title'>身份证号:</text>
-     <text>小胡子语法</text>
+     <text>{{id_num}}</text>
     </view>
   </view>
   <view class='top-title'>行驶证信息</view>
   <view>
     <view class='top-input'>
       <text  class='left-title'>车型:</text>
-      <text>小胡子语法</text>
+      <text>{{car_brand}}</text>
     </view>
     <view class='top-input'>
       <text  class='left-title'>车牌号:</text>
-      <text>小胡子语法</text>
+      <text>{{car_num}}</text>
     </view>
     <view class='top-input'>
       <text  class='left-title'>车辆颜色:</text>
-      <text>小胡子语法</text>
+      <text>{{car_color}}</text>
     </view>
     <view class='top-input'>
       <text  class='left-title'>车辆所有人:</text>
-      <text>小胡子语法</text>
+      <text>{{car_own}}</text>
     </view>
     <view class='top-input'>
       <text  class='left-title'>车辆注册日期:</text>
-      <text>小胡子语法</text>
+      <text>{{car_register}}</text>
     </view>
   </view>
   <view class='flooter-btn'>
-    <button type='primary' class='flooter-btn-left'>审批通过</button>
-    <button type='warn' bindtap='flooterbtn' class='flooter-btn-right'>审批拒绝</button>
+    <button type='primary' bindtap='flooterbtn' class='flooter-btn-left'>审批通过</button>
+    <button type='warn' bindtap='flooternotbtn' class='flooter-btn-right'>审批拒绝</button>
   </view>
 </view>
 

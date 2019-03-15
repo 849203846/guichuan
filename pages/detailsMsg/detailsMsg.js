@@ -10,32 +10,35 @@ Page({
     this.setData({
       id: options.id
     })
-    this.detailsDate(id);
+    this.detailsDate(options.id);
   },
-  detailsDate(id){
+  detailsDate:function(id){
     let data = {
-      id,
+      id: id,
     }
-    feach('','get',data)
+    feach('/admin/Driver/getDriverData','get',data)
     .then(res=>{
-      console.log(res)
+      console.log(res.data.data)
+      this.setData({
+        ...res.data.data
+      })
     })
   },
   flooterbtn(){
     let data = {
        id:this.data.id,
-      status:'1',
+      status:'1'
     }
     feach('/admin/Driver/updateDriverStatus','get',data)
     .then(res=>{
-      console.log(res)
+      console.log(res.data.code)
     })
   },
-  flooternotBtn(){
+  flooternotbtn(){
     let data = {
       id: this.data.id,
       status: '2',
-      marker:''
+      marker: this.data.marker
     }
     feach('/admin/Driver/updateDriverStatus', 'get', data)
       .then(res => {
