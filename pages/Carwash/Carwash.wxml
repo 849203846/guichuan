@@ -1,0 +1,3 @@
+<text>姓名</text>
+<input bindinput='SaveName' placeholder='请输入加油站名称'></input>
+<view bindtap='saveGasStation'>提交</view>
