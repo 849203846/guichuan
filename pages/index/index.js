@@ -19,7 +19,6 @@ Page({
     this.setData({
       car_register: e.detail.value
     })
-    console.log(e.detail.value)
   },
   SaveCar_color(e) {
     this.setData({

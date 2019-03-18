@@ -1,0 +1,4 @@
+/* pages/CarwashList/CarwashList.wxss */
+view{
+  height: 88rpx;
+}

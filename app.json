@@ -1,17 +1,20 @@
 {
   "pages": [
+        "pages/CarwashList/CarwashList",
         "pages/index/index",
     "pages/approvalList/approvalList",
     "pages/login/login",
     "pages/approvalReject/approvalReject",
     "pages/approvalSuccess/approvalSuccess",
     "pages/detailsMsg/detailsMsg",
-
     "pages/logs/logs",
     "pages/UseProtocol/UseProtocol",
     "pages/Inaudit/Inaudit",
     "pages/GasStation/GasStation",
-    "pages/Carwash/Carwash"
+    "pages/Carwash/Carwash",
+    "pages/GasstationData/GasstationData",
+
+    "pages/GasStationList/GasStationList"
   ],
   "window": {
     "backgroundTextStyle": "light",
