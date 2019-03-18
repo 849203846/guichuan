@@ -1,6 +1,6 @@
 {
   "pages": [
-        "pages/CarwashList/CarwashList",
+            "pages/GasStationList/GasStationList",
         "pages/index/index",
     "pages/approvalList/approvalList",
     "pages/login/login",
@@ -12,9 +12,13 @@
     "pages/Inaudit/Inaudit",
     "pages/GasStation/GasStation",
     "pages/Carwash/Carwash",
-    "pages/GasstationData/GasstationData",
 
-    "pages/GasStationList/GasStationList"
+"pages/CarwashList/CarwashList",
+    "pages/CarwashData/CarwashData",
+
+        "pages/GasstationData/GasstationData"
+
+
   ],
   "window": {
     "backgroundTextStyle": "light",
