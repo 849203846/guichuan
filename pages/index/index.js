@@ -8,12 +8,18 @@ Page({
   data: {
     motto: '123',
     car_color: '',
-    car_register: '',
+    car_register: '点击选择日期',
   },
   SaveCar_register(e) {
     this.setData({
       car_register: e.detail.value
     })
+  },
+  bindDateChange:function(e){
+    this.setData({
+      car_register: e.detail.value
+    })
+    console.log(e.detail.value)
   },
   SaveCar_color(e) {
     this.setData({
@@ -108,7 +114,7 @@ Page({
             content: '注册成功，等待审核中',
             showCancel: false,
             success: function() {
-              wx.navigateTo({
+              wx.reLaunch({
                 url: '../Inaudit/Inaudit',
               })
             }

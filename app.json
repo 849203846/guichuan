@@ -1,12 +1,12 @@
 {
   "pages": [
-    
+        "pages/index/index",
     "pages/approvalList/approvalList",
     "pages/login/login",
     "pages/approvalReject/approvalReject",
     "pages/approvalSuccess/approvalSuccess",
     "pages/detailsMsg/detailsMsg",
-    "pages/index/index",
+
     "pages/logs/logs",
     "pages/UseProtocol/UseProtocol",
     "pages/Inaudit/Inaudit",
