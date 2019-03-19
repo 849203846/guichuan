@@ -1,8 +1,12 @@
 {
   "pages": [
 <<<<<<< HEAD
+<<<<<<< HEAD
     "pages/detailsShop/detailsShop",
     "pages/VehicleOwner/VehicleOwner",
+=======
+      "pages/VehicleOwner/VehicleOwner",
+>>>>>>> master
 =======
       "pages/VehicleOwner/VehicleOwner",
 >>>>>>> master
