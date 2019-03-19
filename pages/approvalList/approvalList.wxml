@@ -1,5 +1,5 @@
 <!--pages/approvalList/approvalList.wxml-->
-<view>
+<view class='back'>
   <view class='top'>
     <view class="approval-btn-left {{tabFlag==1?'tabflag':''}}" data-tab="1" bindtap='tab'>会员审核</view>
     <view class="approval-btn-left {{tabFlag==2?'tabflag':''}}" data-tab="2" bindtap='tab'>车主认证</view>
@@ -8,7 +8,7 @@
     <navigator class='list-msg' url='../detailsMsg/detailsMsg?id={{item.id}}'>
       <view class='list-msg-left'>
         <view>姓名：{{item.real_name}}</view>
-        <view>手机号：{{item.mobile}}</view>
+        <view>电话：{{item.mobile}}</view>
       </view>
       <view class='list-msg-right'>{{item.status==1?'未审核':item.status==2?'汽车认证通过':item.status==3?'顺风车资格认证通过':item.status==4?'汽车认证不通过':'顺风车不通过'}}</view>
     </navigator>

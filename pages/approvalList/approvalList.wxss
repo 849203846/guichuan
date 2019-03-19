@@ -1,4 +1,7 @@
 /* pages/approvalList/approvalList.wxss */
+page{
+  background: #f4f4f4;
+}
 .top{
   width: 100%;
   display: flex;
@@ -12,6 +15,8 @@
 .approval-btn-left{
   display: inline-block;
   flex:1;
+  height: 60rpx;
+  line-height: 60rpx;
 }
 
 .approval-btn-right{
@@ -21,7 +26,10 @@
 .list-msg{
   display: flex;
   height: 100rpx;
-  border: 1px solid #bababa;
+  background: white;
+  /* width: 90%; */
+  margin: 40rpx 30rpx 30rpx 30rpx;
+  color: #4a4a4a;
 }
 .list-msg-left{
   flex: 2;
@@ -36,5 +44,6 @@
   line-height: 88rpx;
 }
 .tabflag{
-  background: #bababa
+  background: #4a4d5b;
+  color:white;
 }
