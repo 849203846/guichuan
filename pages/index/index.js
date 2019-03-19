@@ -8,9 +8,52 @@ Page({
   data: {
     motto: '123',
     car_color: '',
-    car_register: '',
+    car_register: '点击选择日期',
+  },
+  onLoad:function(){
+    feach('/api/Driver/getDriverStatus','get',{})
+    .then(res=>{
+      console.log(res.data.data.status)
+      if (res.data.data.status==='1'){
+        wx.reLaunch({
+          url: '../Inaudit/Inaudit',
+        })
+      } else if (res.data.data.status === '2'){
+        //顺风车认证页面
+        wx.reLaunch({
+          url: '../VehicleOwner/VehicleOwner',
+        })
+      } else if (res.data.data.status === '3'){
+        wx.reLaunch({
+          url: '../Inaudit/Inaudit',
+        })
+      } else if (res.data.data.status === '4'){
+        wx.showModal({
+          title: '温馨提示',
+          content: '认证失败，请重新填写信息进行验证。',
+          showCancel:false,
+        })
+      } else if (res.data.data.status === '5'){
+        wx.showModal({
+          title: '温馨提示',
+          content: '认证失败，请重新填写信息进行验证。',
+          showCancel: false,
+          success:()=>{
+                //顺风车认证页面
+            wx.reLaunch({
+              url: '../VehicleOwner/VehicleOwner',
+            })
+          }
+        })
+      }
+    })
   },
   SaveCar_register(e) {
+    this.setData({
+      car_register: e.detail.value
+    })
+  },
+  bindDateChange:function(e){
     this.setData({
       car_register: e.detail.value
     })
@@ -108,7 +151,7 @@ Page({
             content: '注册成功，等待审核中',
             showCancel: false,
             success: function() {
-              wx.navigateTo({
+              wx.reLaunch({
                 url: '../Inaudit/Inaudit',
               })
             }

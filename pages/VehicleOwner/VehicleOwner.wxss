@@ -1,0 +1,9 @@
+.top-title {
+  height: 50rpx;
+  background: rgb(241, 241, 241);
+  font-size: 12px;
+  line-height: 50rpx;
+  margin: 5px 0;
+  padding-left: 10rpx;
+  width:100%;
+}

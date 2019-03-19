@@ -41,8 +41,17 @@
   </view>
   <view class='flooter-btn'>
     <button type='primary' bindtap='flooterbtn' class='flooter-btn-left'>审批通过</button>
-    <button type='warn' bindtap='flooternotbtn' class='flooter-btn-right'>审批拒绝</button>
+    <button type='warn'  bindtap='jvjve' class='flooter-btn-right'>审批拒绝</button>
   </view>
 </view>
 
 
+<view class='alert' style='display:{{alert}}'>
+  <view class='alertContent'>
+    <view class='alerth'>
+      <text>拒绝理由</text>
+    </view>
+    <textarea bindinput='SaveMarker' placeholder='请输入拒绝理由' maxlength='150'></textarea>
+    <view bindtap='flooternotbtn' class='alerthBtn'>确定</view>
+  </view>
+</view>

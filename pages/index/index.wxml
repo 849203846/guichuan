@@ -4,38 +4,39 @@
   <view>
     <view class='top-input'>
       <text class='left-title'>车主姓名:</text>
-      <input bindinput='SaveRealname' placeholder='请输入...'></input>
+      <input bindinput='SaveRealname' placeholder='请输入车主姓名'></input>
     </view>
     <view class='top-input'>
       <text  class='left-title'>车主电话:</text>
-      <input type='number' bindinput='SaveMobile' placeholder='请输入...'></input>
+      <input type='number' bindinput='SaveMobile' placeholder='请输入车主电话'></input>
     </view>
     <view class='top-input'>
       <text  class='left-title'>身份证号:</text>
-      <input bindinput='SaveId_num' placeholder='请输入...'></input>
+      <input bindinput='SaveId_num' placeholder='请输入身份证号'></input>
     </view>
   </view>
   <view class='top-title'>行驶证信息</view>
   <view>
     <view class='top-input'>
       <text  class='left-title'>车型:</text>
-      <input bindinput='SaveCar_brand' placeholder='请输入...'></input>
+      <input bindinput='SaveCar_brand' placeholder='请输入车型'></input>
     </view>
     <view class='top-input'>
       <text  class='left-title'>车牌号:</text>
-      <input bindinput='SaveCar_num' placeholder='请输入...'></input>
+      <input bindinput='SaveCar_num' placeholder='如:京A88888'></input>
     </view>
     <view class='top-input'>
       <text  class='left-title'>车辆颜色:</text>
-      <input bindinput='SaveCar_color' placeholder='请输入...'></input>
+      <input bindinput='SaveCar_color' placeholder='如：香槟佘丽金'></input>
     </view>
     <view class='top-input'>
       <text  class='left-title'>车辆所有人:</text>
-      <input bindinput='SaveCar_own' placeholder='请输入...'></input>
+      <input bindinput='SaveCar_own' placeholder='请输入车辆所有人'></input>
     </view>
     <view class='top-input'>
       <text  class='left-title'>车辆注册日期:</text>
-      <input bindinput='SaveCar_register' placeholder='请输入...'></input>
+      <picker mode='date' bindchange="bindDateChange" placeholder='请输入车辆注册日期' >{{car_register}}</picker>
+      <!-- <input bindinput='SaveCar_register' placeholder='请输入车辆注册日期'></input> -->
     </view>
   </view>
   <button class='submitbtn' bindtap='btnSubmit'>提交</button>

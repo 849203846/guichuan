@@ -1,15 +1,24 @@
 {
   "pages": [
     "pages/detailsShop/detailsShop",
+    "pages/VehicleOwner/VehicleOwner",
+    "pages/index/index",
     "pages/approvalList/approvalList",
     "pages/login/login",
     "pages/approvalReject/approvalReject",
     "pages/approvalSuccess/approvalSuccess",
     "pages/detailsMsg/detailsMsg",
-    "pages/index/index",
     "pages/logs/logs",
     "pages/UseProtocol/UseProtocol",
-    "pages/Inaudit/Inaudit"
+    "pages/Inaudit/Inaudit",
+    "pages/GasStation/GasStation",
+    "pages/Carwash/Carwash",
+    "pages/CarwashList/CarwashList",
+    "pages/CarwashData/CarwashData",
+    "pages/GasStationList/GasStationList",
+    "pages/GasstationData/GasstationData"
+
+
   ],
   "window": {
     "backgroundTextStyle": "light",
