@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/VehicleOwner/VehicleOwner",
+      "pages/VehicleOwner/VehicleOwner",
     "pages/index/index",
     "pages/approvalList/approvalList",
     "pages/login/login",
