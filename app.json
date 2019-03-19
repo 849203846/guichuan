@@ -1,15 +1,6 @@
 {
   "pages": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "pages/detailsShop/detailsShop",
     "pages/VehicleOwner/VehicleOwner",
-=======
-      "pages/VehicleOwner/VehicleOwner",
->>>>>>> master
-=======
-      "pages/VehicleOwner/VehicleOwner",
->>>>>>> master
     "pages/index/index",
     "pages/approvalList/approvalList",
     "pages/login/login",
@@ -24,9 +15,8 @@
     "pages/CarwashList/CarwashList",
     "pages/CarwashData/CarwashData",
     "pages/GasStationList/GasStationList",
-    "pages/GasstationData/GasstationData"
-
-
+    "pages/GasstationData/GasstationData",
+    "pages/detailsShop/detailsShop"
   ],
   "window": {
     "backgroundTextStyle": "light",
