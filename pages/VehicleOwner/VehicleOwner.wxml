@@ -1,12 +1,14 @@
 <view>
   <view bindtap='UPimg' data-dataContent='id_front_img' class='top-title'>身份证照片</view>
-  <image bindtap='UPimg' data-dataContent='id_front_img' src='{{id_front_img}}'></image>
-  <image bindtap='UPimg' data-dataContent='id_back_img' src='{{id_back_img}}'></image>
+  <view class='idimgbox'>
+  <image bindtap='UPimg' class='idimg' data-dataContent='id_front_img' src='{{id_front_img}}'></image>
+  <image bindtap='UPimg'  class='idimg'  data-dataContent='id_back_img' src='{{id_back_img}}'></image>
+  </view>
   <view bindtap='UPimg' data-dataContent='car_travel_img' class='top-title'>汽车行驶证</view>
-  <image bindtap='UPimg' data-dataContent='car_travel_img' src='{{car_travel_img}}'></image>
+  <image bindtap='UPimg' data-dataContent='car_travel_img' class='car_travel_img' src='{{car_travel_img}}'></image>
   <view bindtap='UPimg' data-dataContent='car_drive_img' class='top-title'>驾照</view>
-  <image bindtap='UPimg' data-dataContent='car_drive_img' src='{{car_drive_img}}'></image>
+  <image bindtap='UPimg' data-dataContent='car_drive_img' class='car_drive_img' src='{{car_drive_img}}'></image>
   <view bindtap='UPimg' data-dataContent='car_img' class='top-title'>汽车外观照片</view>
-  <image bindtap='UPimg' data-dataContent='car_img' src='{{car_img}}'></image>
+  <image bindtap='UPimg' data-dataContent='car_img' class='car_img' src='{{car_img}}'></image>
 </view>
-<view bindtap='submit'>提交</view>
+<button  class='submitbtn' bindtap='submit'>提交</button>

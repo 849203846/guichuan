@@ -11,9 +11,34 @@ Page({
     car_drive_img:'',
     car_img:''
   },
-
+onLoad:function(){
+  feach('/api/Driver/getDriverStatus', 'get', {})
+  .then(res=>{
+    if (res.data.data.status === '1') {
+      wx.reLaunch({
+        url: '../Inaudit/Inaudit',
+      })
+    }  else if (res.data.data.status === '3') {
+      wx.reLaunch({
+        url: '../Inaudit/Inaudit',
+      })
+    } else if (res.data.data.status === '4') {
+      wx.showModal({
+        title: '温馨提示',
+        content: '认证失败，请重新填写信息进行验证。',
+        showCancel: false,
+      })
+    } else if (res.data.data.status === '5') {
+      wx.showModal({
+        title: '温馨提示',
+        content: '认证失败，请重新填写信息进行验证。',
+        showCancel: false,
+      })
+    }
+  })
+},
 UPimg:function(e){
-  let url = e.target.dataset.dataContent
+  let url = e.target.dataset.datacontent
   let that = this
   wx.chooseImage({
     success(res) {
@@ -43,9 +68,18 @@ UPimg:function(e){
       car_drive_img: this.data.car_drive_img,
       car_img: this.data.car_img,
     }
-    feach('','get',data)
+    feach('/api/Driver/registerDriver','post',data)
     .then(res=>{
-      console.log(res)
+      if(res.data.code =='0'){
+        wx.reLaunch({
+          url: '../Inaudit/Inaudit',
+        })
+      } else {
+        wx.showModal({
+          title: '温馨提示',
+          content: res.data.msg,
+        })
+      }
     })
   }
 })

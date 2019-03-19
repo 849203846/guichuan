@@ -39,7 +39,7 @@ Page({
   flooterbtn(){
     let data = {
        id:this.data.id,
-      status:'1'
+      status: this.data.status==='6'?'3':'1'
     }
     feach('/admin/Driver/updateDriverStatus','get',data)
     .then(res=>{
@@ -66,7 +66,7 @@ Page({
   flooternotbtn(){
     let data = {
       id: this.data.id,
-      status: '2',
+      status: this.data.status === '6' ? '4' : '2',
       marker: this.data.marker
     }
     if (data.marker===''){

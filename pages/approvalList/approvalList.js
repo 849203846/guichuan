@@ -15,7 +15,6 @@ Page({
     car_mum:''
   },
   tab:function(e){
-    console.log(e.target.dataset.tab)
     this.setData({
       tabFlag: e.target.dataset.tab
     })

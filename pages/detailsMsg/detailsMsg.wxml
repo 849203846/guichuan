@@ -39,11 +39,26 @@
       <text>{{car_register}}</text>
     </view>
   </view>
+  <view>
+  <view class='top-title'>身份证照片</view>
+  <view class='idimgbox'>
+    <image class='idimg' src='http://cx.bjlingdi.com{{id_front_img}}'></image>
+    <image class='idimg' src='http://cx.bjlingdi.com{{id_back_img}}'></image>
+  </view>
+  <view class='top-title'>汽车行驶证</view>
+  <image class='car_travel_img' src='http://cx.bjlingdi.com{{car_travel_img}}'>
+    </image>
+    <view class='top-title'>驾照</view>
+    <image class='car_drive_img' src='http://cx.bjlingdi.com{{car_drive_img}}'></image>
+    <view class='top-title'>汽车外观照片</view>
+    <image class='car_img' src='http://cx.bjlingdi.com{{car_img}}'></image>
+</view>
   <view class='flooter-btn'>
     <button type='primary' bindtap='flooterbtn' class='flooter-btn-left'>审批通过</button>
     <button type='warn'  bindtap='jvjve' class='flooter-btn-right'>审批拒绝</button>
   </view>
 </view>
+
 
 
 <view class='alert' style='display:{{alert}}'>
