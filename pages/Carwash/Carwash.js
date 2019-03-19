@@ -18,6 +18,7 @@ Page({
   onLoad: function (options) {
 
   },
+
   SaveMap: function () {
     wx.chooseLocation({
       success: (res) => {
@@ -80,7 +81,7 @@ Page({
     } else if (!data.phone||data.phone.length!==11){
       this.alert('请输入手机号');
       return;
-    }
+      }
     feach('/admin/Carwash/saveCarwash', 'post', data)
       .then(res => {
         console.log(res)

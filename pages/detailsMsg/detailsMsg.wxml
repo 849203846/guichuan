@@ -1,5 +1,4 @@
-<!--pages/detailsMsg/detailsMsg.wxml-->
-<!--index.wxml-->
+
 <view>
   <view class='top-title'>驾驶证信息</view>
   <view>
@@ -58,8 +57,6 @@
     <button type='warn'  bindtap='jvjve' class='flooter-btn-right'>审批拒绝</button>
   </view>
 </view>
-
-
 
 <view class='alert' style='display:{{alert}}'>
   <view class='alertContent'>

@@ -11,6 +11,7 @@ Page({
     car_drive_img:'',
     car_img:''
   },
+
 onLoad:function(){
   feach('/api/Driver/getDriverStatus', 'get', {})
   .then(res=>{
@@ -38,8 +39,7 @@ onLoad:function(){
   })
 },
 UPimg:function(e){
-  let url = e.target.dataset.datacontent
-  let that = this
+  let url = e.target.dataset.datacontent,that = this
   wx.chooseImage({
     success(res) {
       const tempFilePaths = res.tempFilePaths
@@ -80,6 +80,7 @@ UPimg:function(e){
           content: res.data.msg,
         })
       }
+
     })
   }
 })

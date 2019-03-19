@@ -1,5 +1,6 @@
 <view>
   <view bindtap='UPimg' data-dataContent='id_front_img' class='top-title'>身份证照片</view>
+
   <view class='idimgbox'>
   <image bindtap='UPimg' class='idimg' data-dataContent='id_front_img' src='{{id_front_img}}'></image>
   <image bindtap='UPimg'  class='idimg'  data-dataContent='id_back_img' src='{{id_back_img}}'></image>

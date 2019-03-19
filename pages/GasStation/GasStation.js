@@ -1,3 +1,4 @@
+
 import {
   feach
 } from '../../utils/util.js'
@@ -89,7 +90,18 @@ Page({
       OilList,
     })
   },
-  saveGasStation: function() {
+
+  onLoad: function (options) {
+
+  },
+  alert:function(txt){
+    wx.showModal({
+      title: '温馨提示',
+      content: txt,
+      showCancel:false
+    })
+  },
+  saveGasStation:function(){
     let data = {
       name: this.data.name,
       address: this.data.address,
@@ -167,7 +179,7 @@ Page({
             })
           }
         })
-      }
+    }
     })
   }
 })

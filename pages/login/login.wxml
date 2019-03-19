@@ -13,6 +13,6 @@
       <input password='true' bindinput='passwordInput' placeholder='请输入密码...'></input>
   </view>
   <view class='flooter-btn'>
-    <button type='primary' bindtap='login'>登录</button>
+    <button class='login-submit' bindtap='login'>登录</button>
   </view>
 </view>
