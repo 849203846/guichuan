@@ -4,32 +4,28 @@
   <view>
     <view class='top-input'>
       <text class='left-title'>加油站名称:</text>
-      <input bindinput='SaveName' data-name="name" placeholder='请输入加油站名称'></input>
-    </view>
-    <view class='top-input'>
-      <text class='left-title'>加油站地址:</text>
-      <input type='number' data-name="address" bindinput='SaveName' placeholder='请输入加油站地址'></input>
+      <input bindinput='SaveName' data-name="name" value='{{name}}' placeholder='请输入加油站名称'></input>
     </view>
     <view class='top-input'>
       <text class='left-title'>导航地址:</text>
-      <input bindtap='SaveMap' disabled value="{{Mapname}}"></input>
+      <input bindtap='SaveMap' disabled value="{{address}}"></input>
     </view>
     <view class='top-input'>
       <text class='left-title'>描述:</text>
-      <input bindinput='SaveId_num' data-name="description" bindinput='SaveName' placeholder='请输入描述'></input>
+      <input bindinput='SaveId_num' data-name="description" value='{{description}}' bindinput='SaveName' placeholder='请输入描述'></input>
     </view>
   </view>
 
   <view class='top-input'>
     <text class='left-title'>手机号:</text>
-    <input bindinput='SaveCar_brand' data-name="phone" bindinput='SaveName' placeholder='请输入手机号'></input>
+    <input bindinput='SaveCar_brand' data-name="phone" value='{{phone}}' bindinput='SaveName' placeholder='请输入手机号'></input>
   </view>
   <view class='top-title oilpricetitle'>
     <text>油品配置</text>
     <text  bindtap='addOilList'>⊕</text>
     <!-- <text bindtap='addOilList'>+</text> -->
   </view>
-  <block wx:for="{{OilList}}" wx:item="item" wx:index="index">
+  <block wx:for="{{OilList}}" wx:key="{{index}}" wx:item="item" wx:index="index">
     <view class='top-input oilprice'>
       <text>油号:</text>
       <input bindinput='SaveCar_brand' value='{{item.gasoline_type}}' placeholder-class='oilclass' data-index='{{index}}' bindinput='SaveGasoline_type' placeholder='例：93 '></input>
@@ -42,7 +38,7 @@
     </view>
   </block>
   <view class='top-title'>加油站图片</view>
-  <image src='{{thumb}}' class='thumb' bindtap='upimg'></image>
+  <image src='http://cx.bjlingdi.com{{thumb}}' class='thumb' bindtap='upimg'></image>
 
   <button class='submitbtn' bindtap='saveGasStation'>提交</button>
 </view>

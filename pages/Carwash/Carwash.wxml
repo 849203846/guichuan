@@ -3,36 +3,32 @@
   <view>
     <view class='top-input'>
       <text class='left-title'>加油站名称:</text>
-      <input bindinput='SaveName' data-name='name' placeholder='请输入加油站名称'></input>
-    </view>
-    <view class='top-input'>
-      <text class='left-title'>加油站地址:</text>
-      <input type='number' bindinput='SaveName' data-name='address' placeholder='请输入加油站地址'></input>
+      <input bindinput='SaveName' data-name='name' value='{{name}}' placeholder='请输入加油站名称'></input>
     </view>
     <view class='top-input'>
       <text class='left-title'>导航地址:</text>
-      <input bindtap='SaveMap' disabled value="{{Mapname}}"></input>
+      <input bindtap='SaveMap' disabled value="{{address}}"></input>
     </view>
     <view class='top-input'>
       <text class='left-title'>描述:</text>
-      <input bindinput='SaveId_num' bindinput='SaveName' data-name='description' placeholder='请输入描述'></input>
+      <input bindinput='SaveId_num' bindinput='SaveName' data-name='description' value='{{description}}' placeholder='请输入描述'></input>
     </view>
   </view>
 
   <view class='top-input'>
     <text class='left-title'>手机号:</text>
-    <input bindinput='SaveCar_brand' bindinput='SaveName' data-name='phone' placeholder='请输入手机号'></input>
+    <input bindinput='SaveCar_brand' bindinput='SaveName' data-name='phone' value='{{phone}}' placeholder='请输入手机号'></input>
   </view>
   <view class='top-input'>
     <text class='left-title'>洗车原价:</text>
-    <input bindinput='Savereal_price' bindinput='SaveName' data-name='original_price' placeholder='请输入洗车原价'></input>
+    <input bindinput='Savereal_price' bindinput='SaveName' data-name='original_price' value='{{original_price}}' placeholder='请输入洗车原价'></input>
   </view>
   <view class='top-input'>
     <text class='left-title'>优惠价:</text>
-    <input bindinput='SaveCar_brand' bindinput='SaveName' data-name='real_price' placeholder='请输入优惠价'></input>
+    <input bindinput='SaveCar_brand' bindinput='SaveName' data-name='real_price' value='{{real_price}}' placeholder='请输入优惠价'></input>
   </view>
   <view class='top-title'>加油站图片</view>
-  <image src='{{thumb}}' class='thumb' bindtap='upimg'></image>
+  <image src='http://cx.bjlingdi.com{{thumb}}' class='thumb' bindtap='upimg'></image>
 
   <button class='submitbtn' bindtap='saveGasStation'>提交</button>
 </view>

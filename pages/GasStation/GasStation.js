@@ -20,6 +20,18 @@ Page({
       original_price: ''
     }, ]
   },
+  onLoad:function(opc){
+    feach('/admin/Gasstation/getGasstationData','get',{id:opc.id})
+    .then(res=>{
+      console.log(res)
+      let OilList = JSON.parse(res.data.data.product)
+      this.setData({
+        id:opc.id,
+        ...res.data.data,
+        OilList
+      })
+    })
+  },
   alert: function(txt) {
     wx.showModal({
       title: '温馨提示',
@@ -40,7 +52,7 @@ Page({
         this.setData({
           latitude: res.latitude,
           longitude: res.longitude,
-          Mapname: res.name,
+          address: res.name,
         })
       }
     })
@@ -90,10 +102,6 @@ Page({
       OilList,
     })
   },
-
-  onLoad: function (options) {
-
-  },
   alert:function(txt){
     wx.showModal({
       title: '温馨提示',
@@ -102,6 +110,9 @@ Page({
     })
   },
   saveGasStation:function(){
+    if (this.data.OilList.length === 1 && this.data.OilList[0].gasoline_type===''){
+      return;
+    }
     let data = {
       name: this.data.name,
       address: this.data.address,
@@ -109,7 +120,7 @@ Page({
       latitude: this.data.latitude,
       thumb: this.data.thumb,
       description: this.data.description,
-      OilList: this.data.OilList,
+      prduct: JSON.stringify(this.data.OilList),
       phone: this.data.phone,
     }
     console.log(data);
@@ -129,15 +140,21 @@ Page({
       this.alert('请输入手机号')
       return;
     }
+    if(this.data.id){
+      data.id=this.data.id
+    }
     feach('/admin/Gasstation/saveGasStation', 'post', data)
       .then(res => {
         console.log(res)
-        if (res.data.code === '0') {
+        if (res.data.code === 0) {
           wx.showModal({
             title: '温馨提示',
-            content: '添加成功，已为您自动清空',
+            content: res.data.msg,
             showCancel: false,
             success: () => {
+              if(data.id){
+                wx.navigateBack({})
+              }
               this.setData({
                 name: '',
                 address: '',
@@ -145,8 +162,14 @@ Page({
                 latitude: '',
                 thumb: '',
                 description: "",
+                OilList: [{
+                  gasoline_type: '',
+                  real_price: '',
+                  original_price: ''
+                }],
                 original_price: '',
                 phone: '',
+                Mapname:'',
                 real_price: '',
               })
             }

@@ -13,7 +13,7 @@ Page({
     let data = {
       id
     }
-    feach('/admin/Gasstation/getCarwashData', 'GET', data)
+    feach('/admin/Carwash/getCarwashData', 'GET', data)
       .then(res => {
         console.log(res.data)
         if (res.data.code === '0') {
@@ -22,5 +22,8 @@ Page({
           })
         }
       })
+  },
+  pay:function(){
+    
   }
 })

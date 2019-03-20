@@ -16,7 +16,16 @@ Page({
     real_price: '',//当前价格
   },
   onLoad: function (options) {
-
+    if (options.id){
+      feach('/admin/Carwash/getCarwashData', 'get', { id: options.id})
+      .then(res=>{
+        console.log(res.data.data)
+        this.setData({
+          id: options.id,
+          ...res.data.data
+        })
+      })
+    }
   },
 
   SaveMap: function () {
@@ -25,7 +34,7 @@ Page({
         this.setData({
           latitude: res.latitude,
           longitude: res.longitude,
-          Mapname: res.name,
+          address: res.name,
         })
       }
     })
@@ -82,20 +91,28 @@ Page({
       this.alert('请输入手机号');
       return;
       }
+      if(this.data.id){
+        data.id=this.data.id
+      }
     feach('/admin/Carwash/saveCarwash', 'post', data)
       .then(res => {
         console.log(res)
-        if (res.data.code === '0') {
+        if (res.data.code === 0) {
           wx.showModal({
             title: '温馨提示',
-            content: '添加成功，已为您自动清空',
+            content: res.data.msg,
             showCancel: false,
             success: () => {
+              if(data.id){
+                wx.navigateBack({})
+                return
+              }
               this.setData({
                 name: '',
                 address: '',
                 longitude: '',
                 latitude: '',
+                Mapname:'',
                 thumb: '',
                 description: "",
                 original_price: '',

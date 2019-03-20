@@ -1,0 +1,12 @@
+
+<block wx:for="{{list}}">
+<navigator url='../Carwash/Carwash?id={{item.id}}'>
+<view>
+<view>店铺名称{{item.name}}</view>
+<view>店铺地址{{item.address}}</view>
+</view>
+</navigator>
+
+</block>
+
+<view bindtap='add' class='add'>新增</view>

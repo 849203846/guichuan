@@ -14,7 +14,7 @@
     </navigator>
   </block>
   <view class='footer'>
-    <navigator url='../GasStation/GasStation'>+加油站</navigator>
-    <navigator url='../Carwash/Carwash'>+洗车店</navigator>
+    <navigator url='../CRMGasStationList/CRMGasStationList'>+加油站</navigator>
+    <navigator url='../CRMCarwashList/CRMCarwashList'>+洗车店</navigator>
   </view>
 </view>

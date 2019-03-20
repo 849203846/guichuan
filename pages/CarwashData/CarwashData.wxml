@@ -6,3 +6,4 @@
 <view>{{address}}</view>
 <view>{{inputtime}}</view>
 <view>{{phone}}</view>
+<view bindtap='pay'>支付</view>

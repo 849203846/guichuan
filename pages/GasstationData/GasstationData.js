@@ -22,5 +22,19 @@ Page({
         })
       }
     })
+  },pay:function(){
+    let data  = {
+      id:this.data.id,
+
+    }
+    wx.requestPayment({
+      timeStamp: '',
+      nonceStr: '',
+      package: '',
+      signType: 'MD5',
+      paySign: '',
+      success(res) { },
+      fail(res) { }
+    })
   }
 })

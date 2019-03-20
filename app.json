@@ -1,5 +1,8 @@
 {
   "pages": [
+        "pages/CarwashList/CarwashList",
+      "pages/GasStationList/GasStationList",
+      
         "pages/approvalList/approvalList",
       "pages/VehicleOwner/VehicleOwner",
     "pages/index/index",
@@ -13,9 +16,10 @@
     "pages/Inaudit/Inaudit",
     "pages/GasStation/GasStation",
     "pages/Carwash/Carwash",
-    "pages/CarwashList/CarwashList",
+
+    "pages/CRMGasStationList/CRMGasStationList",
+        "pages/CRMCarwashList/CRMCarwashList",
     "pages/CarwashData/CarwashData",
-    "pages/GasStationList/GasStationList",
     "pages/GasstationData/GasstationData",
     "pages/detailsShop/detailsShop"
 

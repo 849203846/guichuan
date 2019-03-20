@@ -16,7 +16,7 @@ Page({
       page: this.data.page,
       name: this.data.name
     }
-    feach('/admin/Carwash/getGasStationList', 'get', data)
+    feach('/admin/Gasstation/getGasStationList', 'get', data)
       .then(res => {
         if (res.data.code === '0') {
           this.setData({
