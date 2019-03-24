@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/GasStationList/GasStationList",
         "pages/CarwashList/CarwashList",
-      "pages/GasStationList/GasStationList",
       
         "pages/approvalList/approvalList",
       "pages/VehicleOwner/VehicleOwner",
     "pages/index/index",
-
+    "pages/feeeRude/feeeRude",
     "pages/login/login",
     "pages/approvalReject/approvalReject",
     "pages/approvalSuccess/approvalSuccess",
