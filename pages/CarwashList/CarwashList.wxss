@@ -1,4 +1,31 @@
 /* pages/CarwashList/CarwashList.wxss */
-view{
-  height: 88rpx;
+page{
+  background: #c8c7cd;
+}
+.list-total{
+  height: 200rpx;
+  display: flex;
+  margin-bottom: 10rpx;
+  background: white;
+  border-top: 1rpx solid #c8c7cd;
+}
+.list-left{
+  flex: 1;
+  width: 10rpx;
+}
+.list-center{
+  flex: 1;
+}
+.list-right{
+  flex: 1;
+  width: 50rpx;
+}
+.list-title{
+  font-size: 14px;
+  font-weight: bold;
+}
+.list-address{
+  font-size: 12px;
+  margin-top: 10rpx;
+  color:#9a9a9a;
 }

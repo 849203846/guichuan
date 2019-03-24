@@ -1,5 +1,13 @@
 <!--pages/CarwashList/CarwashList.wxml-->
 <block wx:for="{{list}}">
-<i class="iconfont iconGas">&#xe6b9;</i>
-<navigator url='../CarwashData/CarwashData?id={{item.id}}'>{{item.address}}</navigator>
+<navigator url='../CarwashData/CarwashData?id={{item.id}}'>
+  <view class='list-total'>
+    <view class='list-left'><i class="iconfont iconGas">&#xe6b9;</i></view>
+    <view class='list-center'>
+      <view class='list-title'>{{item.name}}</view>
+      <view class='list-address'>{{item.address}}</view>
+    </view>
+    <view class='list-right'></view>
+  </view>
+</navigator>
 </block>

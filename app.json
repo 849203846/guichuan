@@ -1,15 +1,13 @@
 {
   "pages": [
-      "pages/Select/Select",
+    "pages/Select/Select",
     "pages/feeeRude/feeeRude",
     "pages/feeeRude/releaseTrip/releaseTrip",
     "pages/GasStationList/GasStationList",
-        "pages/CarwashList/CarwashList",
-   
-        "pages/approvalList/approvalList",
-      "pages/VehicleOwner/VehicleOwner",
+    "pages/CarwashList/CarwashList",
+    "pages/approvalList/approvalList",
+    "pages/VehicleOwner/VehicleOwner",
     "pages/index/index",
-   
     "pages/login/login",
     "pages/approvalReject/approvalReject",
     "pages/approvalSuccess/approvalSuccess",
@@ -19,9 +17,8 @@
     "pages/Inaudit/Inaudit",
     "pages/GasStation/GasStation",
     "pages/Carwash/Carwash",
-
     "pages/CRMGasStationList/CRMGasStationList",
-        "pages/CRMCarwashList/CRMCarwashList",
+    "pages/CRMCarwashList/CRMCarwashList",
     "pages/CarwashData/CarwashData",
     "pages/GasstationData/GasstationData",
     "pages/detailsShop/detailsShop"
