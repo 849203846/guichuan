@@ -1,1 +1,8 @@
 /* pages/feeeRude/feeeRude.wxss */
+.bar{
+  display: flex;
+}
+.bar>view{
+  flex: 1;
+  text-align: center;
+}

@@ -1,2 +1,3 @@
-<!--pages/feeeRude/feeeRude.wxml-->
-<text>pages/feeeRude/feeeRude.wxml</text>
+顺风车列表
+
+<navigator url="./releaseTrip/releaseTrip?flag={{flag}}">发布行程</navigator>
