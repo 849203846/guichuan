@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/GasStationList/GasStationList",
+    "pages/CarwashData/CarwashData",
     "pages/CarwashList/CarwashList",
+    "pages/GasStationList/GasStationList",
     "pages/approvalList/approvalList",
     "pages/VehicleOwner/VehicleOwner",
     "pages/index/index",
@@ -17,7 +18,6 @@
     "pages/Carwash/Carwash",
     "pages/CRMGasStationList/CRMGasStationList",
     "pages/CRMCarwashList/CRMCarwashList",
-    "pages/CarwashData/CarwashData",
     "pages/GasstationData/GasstationData",
     "pages/detailsShop/detailsShop"
 
