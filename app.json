@@ -1,7 +1,8 @@
 {
   "pages": [
+    "pages/GasStationList/GasStationList",
         "pages/CarwashList/CarwashList",
-      "pages/GasStationList/GasStationList",
+     
       
         "pages/approvalList/approvalList",
       "pages/VehicleOwner/VehicleOwner",
