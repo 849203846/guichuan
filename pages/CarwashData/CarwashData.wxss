@@ -215,3 +215,6 @@
 .top-third-money-right-color{
   color:#6ea863;
 }
+.button-yinxiang{
+  padding-left: 20rpx;
+}

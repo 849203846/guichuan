@@ -37,11 +37,13 @@
   <view class='top-line'></view>
   <view>
     <view class='top-second-title'>车友印象</view>
-    <text class='top-second-msg'>油价便宜(666)</text>
-    <text class='top-second-msg'>油价便宜(666)</text>
-    <text class='top-second-msg'>油价便宜(666)</text>
-    <text class='top-second-msg'>油价便宜(666)</text>
-    <text class='top-second-msg'>油价便宜(666)</text>
+    <view class='button-yinxiang'>
+      <text class='top-second-msg'>油价便宜(666)</text>
+      <text class='top-second-msg'>油价便宜(666)</text>
+      <text class='top-second-msg'>油价便宜(666)</text>
+      <text class='top-second-msg'>油价便宜(666)</text>
+      <text class='top-second-msg'>油价便宜(666)</text>
+    </view>
   </view>
   <view>
    <view class='top-second-title'>实时订单</view>
