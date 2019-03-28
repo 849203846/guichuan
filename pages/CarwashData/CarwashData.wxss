@@ -1,1 +1,220 @@
 /* PAGES/CarwashData/CarwashData.wxss */
+@font-face {
+  font-family: 'iconfont';  /* project id 1105109 */
+  src: url('//at.alicdn.com/t/font_1105109_cchazuqinz.eot');
+  src: url('//at.alicdn.com/t/font_1105109_cchazuqinz.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1105109_cchazuqinz.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1105109_cchazuqinz.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1105109_cchazuqinz.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1105109_cchazuqinz.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon_jiayou{
+  text-align: center;
+  line-height: 100rpx;
+  padding-left: 22rpx;
+}
+.icon_daohang{
+  padding-left: 30rpx;
+}
+.icon_jiayou::before{
+  content:"\e64a";
+  font-size: 30px;
+  color: #9a9a9a;
+}
+.icon_daohang::before{
+  content:"\e640";
+  font-size: 20px;
+  color:#4a4d5b;
+}
+.icon_block{
+  padding-right: 10rpx;
+}
+.icon_block::before{
+  content:"\e61f";
+  font-size: 12px;
+  color: #9a9a9a;
+}
+.icon_dingwei::before{
+  content:"\e60f";
+  font-size: 12px;
+  color: #9a9a9a;
+}
+.icon_dingwei{
+  padding-right: 10rpx;
+}
+.top-nav{
+  position: relative;
+  height: 250rpx;
+  /* left: 0;
+  top: 0; */
+}
+.img-back{
+  width: 100%;
+  height: 200rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.top-icon{
+  background: white;
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -50rpx;
+  top: 150rpx;
+}
+.top-title{
+  text-align: center;
+  font-size: 35rpx;
+  font-weight: bold;
+   margin-top: 10rpx;
+}
+.top-rate{
+  color:#9a9a9a;
+  text-align: center;
+  margin-top: 10rpx;
+}
+.top-line{
+  height: 20rpx;
+  background: #f2f3f4;
+}
+.top-price{
+  background: white;
+  margin-top: 20rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+}
+.top-left{
+  padding-left: 35rpx;
+  /* flex:1; */
+  /* width: 50rpx; */
+}
+.top-center{
+  flex:1;
+  margin-left: 45rpx;
+  /* width: 200rpx; */
+}
+.top-right{
+  /* flex:1; */
+  padding-right: 35rpx;
+  /* margin-right: 30rpx; */
+}
+.top-center-name{
+  color: #4a4d5b;
+  text-align: center;
+}
+.top-center-price{
+  margin-top: 10rpx;
+  color: #f8935a;
+  font-size: 35rpx;
+  font-weight: bold;
+  text-align: center;
+}
+.top-right-name{
+  color: #4a4d5b;
+  text-align: center;
+}
+.top-right-price{
+  margin-top: 10rpx;
+  color: #9a9a9a;
+  font-size: 35rpx;
+  font-weight: bold;
+  text-align: center;
+}
+.top-msg-title{
+  display: flex;
+  padding-top: 30rpx;
+  /* border-bottom: 1rpx solid #f2f3f4; */
+  color: #9a9a9a;
+}
+.top-msg-title-left{
+  flex:1;
+  text-align: center;
+}
+.top-msg-title-center{
+  flex:1;
+  text-align: center;
+}
+.top-msg-title-right{
+  flex:1;
+  text-align: center;
+}
+.top-msg-item{
+  color: #f8935a;
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid #f8935a;
+}
+.top-msg-line{
+  height: 1rpx;
+  background: #f2f3f4;
+}
+.top-detail{
+  padding: 30rpx;
+  border-bottom: 1rpx solid #f2f3f4;
+}
+.top-detail-icon{
+  display: inline-block;
+  padding-left: 50rpx;
+}
+.top-detail-left{
+  display: inline-block;
+}
+.top-second-title{
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #f2f3f4;
+}
+.top-second-msg{
+  display: inline-block;
+  margin: 20rpx 10rpx 10rpx 10rpx;
+  padding: 10rpx 20rpx 10rpx 20rpx;
+  border: 1px solid #ffc3a6;
+  background: #fdf8f0;
+  color:#f79358;
+}
+.top-third-msg{
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  padding-bottom: 15rpx;
+}
+.top-third-avatar{
+ 
+}
+.top-third-name{
+  color: #9a9a9a;
+  margin-left: 20rpx;
+}
+.top-third-car{
+  color: #9a9a9a;
+  margin-left: 20rpx;
+}
+.top-third-money{
+  display: flex;
+}
+.top-third-money-left{
+  flex: 1;
+  padding-left: 20rpx;
+}
+.top-third-money-center{
+  flex: 1;
+}
+.top-third-money-right{
+  flex: 1;
+}
+.top-third-money-right-color{
+  color:#6ea863;
+}
+.button-yinxiang{
+  padding-left: 20rpx;
+}

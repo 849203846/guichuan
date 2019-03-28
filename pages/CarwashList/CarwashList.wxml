@@ -1,4 +1,27 @@
 <!--pages/CarwashList/CarwashList.wxml-->
 <block wx:for="{{list}}">
-<navigator url='../CarwashData/CarwashData?id={{item.id}}'>{{item.address}}</navigator>
+<navigator url='../CarwashData/CarwashData?id={{item.id}}'>
+  <view class='list-total'>
+    <view class='list-left'>
+      <i class="iconfont icon_jiayou"></i>
+    </view>
+    <view class='list-center'>
+      <view class='list-title'>{{item.name}}</view>
+      <view class='list-address'>{{item.address}}</view>
+      <view>
+        <i class="iconfont icon_star"></i>
+        <text class='list-rate'>4.9</text>
+      </view>
+      <view>
+        <text class='list-rate'>油站价：</text>
+        <text class='list-money'>8.88元</text>
+        <text class='list-price'>认证后可降9.99元</text>
+      </view>
+    </view>
+    <view class='list-right'>
+      <i class="iconfont icon_daohang"></i>
+      2.1km
+    </view>
+  </view>
+</navigator>
 </block>
