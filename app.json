@@ -1,8 +1,8 @@
 {
   "pages": [
+        "pages/feeeRude/feeeRude",
     "pages/CarwashData/CarwashData",
     "pages/Select/Select",
-    "pages/feeeRude/feeeRude",
     "pages/feeeRude/releaseTrip/releaseTrip",
     "pages/GasStationList/GasStationList",
     "pages/CarwashList/CarwashList",

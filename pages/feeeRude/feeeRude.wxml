@@ -1,3 +1,8 @@
-顺风车列表
 
+<block wx:for="{{list}}" key="{{item.index}}">
+<view>{{item.start}}</view>
+<!-- 
+start（开始位置） start_longitude（开始位置经度） start_latitude（科室位置纬度） end（结束位置） end_longitude（结束位置经度） end_latitude（结束位置纬度） go_time（出发时间） count（乘坐人数） marker（乘车备注） inputtime（发布日期） status（行程状态） price（乘车价格）  mobile（手机号） uid(用户id) nickname（用户微信昵称） thumb(用户微信头像)
+ -->
+</block>
 <navigator url="./releaseTrip/releaseTrip?flag={{flag}}">发布行程</navigator>

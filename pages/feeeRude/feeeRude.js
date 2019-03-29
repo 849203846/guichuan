@@ -1,4 +1,7 @@
-// pages/feeeRude/feeeRude.js
+
+import {
+  feach
+} from '../../utils/util.js'
 Page({
 
   /**
@@ -9,15 +12,24 @@ Page({
   },
 
   Savebar: function (e) {
-    console.log(e.target.dataset.flag)
     this.setData({
       flag: e.target.dataset.flag
     })
   },
   onLoad: function (options) {
     this.setData({
-      flag: options.flag,
+      flag: options.flag||1,
     })
   },
-
+  onShow:function(){
+    feach('/api/Release/getUserReleaseList','get',{
+      status:1,
+      page:1,
+    }).then(res=>{
+      console.log(res.data.data.list)
+      this.setData({
+        list:res.data.data.list,
+      })
+    })
+  }
 })

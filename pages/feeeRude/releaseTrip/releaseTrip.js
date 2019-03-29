@@ -32,6 +32,11 @@ Page({
       price:e.detail.value
     })
   },
+  Savephone:function(e){
+    this.setData({
+      phone: e.detail.value
+    }) 
+  },
   SaveCode: function (e) {
     this.setData({
       code: e.detail.value
@@ -72,6 +77,26 @@ Page({
 
     
   },
+  sendCode:function(){
+    let data = {
+        marker:1,
+        phone:this.data.phone,
+    }
+    if (data.phone == '' || data.phone.length!==11){
+      wx.showModal({
+        title: '温馨提示',
+        content: '请输入正确手机号',
+        showCancel:false
+      })
+    }
+    feach('/api/Base/sendCode','get',data).then(res=>{
+      wx.showModal({
+        title: '温馨提示',
+        content: res.data.msg,
+        showCancel: false
+      })
+    })
+  },
 submit:function(){
   let data = {
       start:'',
@@ -85,7 +110,11 @@ submit:function(){
   }
   feach('/api/Release/DriverRelease','post',data)
   .then(res=>{
-    console.log(res)
+    wx.showModal({
+      title: '温馨提示',
+      content: res.data.msg,
+      showCancel:false
+    })
   })
 },
 SaveTime:function(e){

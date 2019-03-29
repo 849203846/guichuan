@@ -21,12 +21,12 @@
 </view>
 <view>
 <test>手机号</test>
-<input value="{{phone}}"></input>
+<input value="{{phone}}" bindinput='Savephone'></input>
 </view>
 <view>
 <test>验证码</test>
 <input bindinput='SaveCode'></input>
-<test>发送验证码</test>
+<test bindtap="sendCode">发送验证码</test>
 </view>
 
 
