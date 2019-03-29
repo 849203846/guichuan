@@ -1,0 +1,48 @@
+
+<view bindtap='SaveStart'>
+<test>出发地址</test>
+<text>{{start}}</text>
+</view>
+<view bindtap='SaveEnd'>
+<test>目标地址</test>
+<text>{{end}}</text>
+</view>
+<view>
+<test>乘车人数</test>
+<input type='number' bindinput='SaveCount'></input>
+</view>
+<view>
+<test>备注</test>
+<input placeholder='请输入备注' bindinput='SaveMarker'></input>
+</view>
+<view>
+<test>乘车价格</test>
+<input type='number' placeholder='请输入可接受价格' bindinput='SavePrice'></input>
+</view>
+<view>
+<test>手机号</test>
+<input value="{{phone}}" bindinput='Savephone'></input>
+</view>
+<view>
+<test>验证码</test>
+<input bindinput='SaveCode'></input>
+<test bindtap="sendCode">发送验证码</test>
+</view>
+
+
+
+
+
+<view>
+<test>出发时间</test>
+<picker
+    mode="date"
+    value="{{go_time}}"
+    bindchange="SaveTime"
+  >
+    <view class="picker">
+      当前选择: {{go_time}}
+    </view>
+  </picker>
+</view>
+<button bindtap="submit">提交</button>
