@@ -1,36 +1,42 @@
 {
   "pages": [
+
     "pages/VehicleList/VehicleList",
     "pages/VehicleList/VehicleTrip/VehicleTrip",
     "pages/VehicleList/detail/detail",
+
 
     "pages/feeeRude/releaseTrip/releaseTrip",
     "pages/feeeRude/detail/detail",
     "pages/feeeRude/feeeRude",
 
+
     "pages/index/index",
+    "pages/login/login",
+    "pages/Inaudit/Inaudit",
+    "pages/logs/logs",
+
 
     "pages/CRMCarwashList/CRMCarwashList",
     "pages/CRMGasStationList/CRMGasStationList",
+    "pages/GasStationList/GasStationList",
+
 
     "pages/GasstationData/GasstationData",
-    "pages/GasStationList/GasStationList",
+  
     "pages/CarwashList/CarwashList",
     "pages/CarwashData/CarwashData",
 
 
     "pages/Select/Select",
-    "pages/Inaudit/Inaudit",
     "pages/GasStation/GasStation",
     "pages/Carwash/Carwash",
     "pages/VehicleOwner/VehicleOwner",
     "pages/UseProtocol/UseProtocol",
     "pages/approvalList/approvalList",
-    "pages/login/login",
     "pages/approvalReject/approvalReject",
     "pages/approvalSuccess/approvalSuccess",
     "pages/detailsMsg/detailsMsg",
-    "pages/logs/logs",
     "pages/detailsShop/detailsShop"
   ],
   "window": {
