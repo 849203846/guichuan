@@ -15,13 +15,17 @@ Page({
 onLoad:function(){
   feach('/api/Driver/getDriverStatus', 'get', {})
   .then(res=>{
-    if (res.data.data.status === '1') {
+    if(res.data.data.status === '0'){
+      wx.reLaunch({
+        url: '../index/index',
+      })
+    } else if (res.data.data.status === '1' || res.data.data.status === '6') {
       wx.reLaunch({
         url: '../Inaudit/Inaudit',
       })
     }  else if (res.data.data.status === '3') {
       wx.reLaunch({
-        url: '../Inaudit/Inaudit',
+        url: '../approvalSuccess/approvalSuccess',
       })
     } else if (res.data.data.status === '4') {
       wx.showModal({

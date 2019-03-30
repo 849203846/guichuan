@@ -1,30 +1,37 @@
 {
   "pages": [
+    "pages/VehicleList/VehicleList",
+    "pages/VehicleList/VehicleTrip/VehicleTrip",
+    "pages/VehicleList/detail/detail",
+
     "pages/feeeRude/releaseTrip/releaseTrip",
-    "pages/CRMCarwashList/CRMCarwashList",
-    "pages/Select/Select",
+    "pages/feeeRude/detail/detail",
     "pages/feeeRude/feeeRude",
-    "pages/Inaudit/Inaudit",
-    "pages/GasStation/GasStation",
+
+    "pages/index/index",
+
+    "pages/CRMCarwashList/CRMCarwashList",
     "pages/CRMGasStationList/CRMGasStationList",
-    "pages/Carwash/Carwash",
-    "pages/VehicleOwner/VehicleOwner",
+
     "pages/GasstationData/GasstationData",
     "pages/GasStationList/GasStationList",
-    "pages/detailsMsg/detailsMsg",
     "pages/CarwashList/CarwashList",
     "pages/CarwashData/CarwashData",
+
+
+    "pages/Select/Select",
+    "pages/Inaudit/Inaudit",
+    "pages/GasStation/GasStation",
+    "pages/Carwash/Carwash",
+    "pages/VehicleOwner/VehicleOwner",
     "pages/UseProtocol/UseProtocol",
     "pages/approvalList/approvalList",
-    "pages/VehicleList/VehicleList",
-    "pages/VehicleTrip/VehicleTrip",   
-    "pages/index/index",
     "pages/login/login",
     "pages/approvalReject/approvalReject",
     "pages/approvalSuccess/approvalSuccess",
-    "pages/logs/logs"
-    
-
+    "pages/detailsMsg/detailsMsg",
+    "pages/logs/logs",
+    "pages/detailsShop/detailsShop"
   ],
   "window": {
     "backgroundTextStyle": "light",

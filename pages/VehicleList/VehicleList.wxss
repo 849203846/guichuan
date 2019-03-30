@@ -6,3 +6,39 @@
   flex: 1;
   text-align: center;
 }
+.item{
+  width:100%;
+  padding: 5rpx 10rpx;
+  position: relative;
+  left: 0;
+  top: 0;
+  border: 1rpx solid #eee;
+}
+.item>view{
+  display: flex;
+  width:100%;
+
+}
+.item>view>text:nth-child(1){
+  width: 30%;
+
+}
+.item>view>text:nth-child(2){
+  flex: 1;
+}
+.item .price{
+  position: absolute;
+  right: 50rpx;
+  top: 20rpx;
+
+}
+.btn{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width:100%;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: lightblue;
+}

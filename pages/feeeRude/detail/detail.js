@@ -1,4 +1,4 @@
-// pages/VehicleTrip/VehicleTrip.js
+// pages/feeeRude/detail/detail.js
 Page({
 
   /**

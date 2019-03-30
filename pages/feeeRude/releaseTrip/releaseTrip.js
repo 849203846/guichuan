@@ -3,81 +3,106 @@ import {
 } from '../../../utils/util.js'
 Page({
   data: {
-    go_time:'2019:03'
+    go_time:'2019:03',
+    sendcode:'获取验证码'
   },
-  onLoad(opc){
-    let flag = opc.flag
+  onLoad(opc) {
+    let time = new Date();
     this.setData({
-      flag,
-    })
-    feach('/admin/Driver/getDriverByStatus','get',{})
-    .then(res=>{
-      console.log(res)
+      go_Date: time.getFullYear() + '-' + (time.getMonth() + 1) + '-' + time.getDate(),
+      go_time: time.getHours() + ':' + time.getMinutes()
     })
   },
-  SaveCount:function(e){
-    console.log(e.detail.value)
+  SaveCount: function (e) {
     this.setData({
-      count:e.detail.value,
+      count: e.detail.value,
     })
   },
   SaveMarker: function (e) {
-    console.log(e.detail.value)
     this.setData({
       marker: e.detail.value,
     })
   },
-  SavePrice:function(e){
+  SavePrice: function (e) {
     this.setData({
-      price:e.detail.value
+      price: e.detail.value
     })
   },
-  Savephone:function(e){
+  Savephone: function (e) {
     this.setData({
       phone: e.detail.value
-    }) 
+    })
   },
   SaveCode: function (e) {
     this.setData({
       code: e.detail.value
     })
   },
-  openMap:function(){
+  openMap: function () {
     wx.chooseLocation({
       success(res) {
         return res;
       }
     })
   },
-  SaveStart:function(){
-    let res = this.openMap();
-    this.setData({
-      start: res.address,
-      startLatitude: res.latitude,
-      startLongitude: res.longitude,
+  SaveStart: function () {
+    let that = this
+    wx.chooseLocation({
+      success(res) {
+        that.setData({
+          start: res.address,
+          startLatitude: res.latitude,
+          startLongitude: res.longitude,
+        })
+        if (that.data.EndLatitude) {
+          let data = {
+            origin: that.data.startLatitude + ',' + that.data.startLongitude,
+            destination: that.data.EndLatitude + ',' + that.data.EndLongitude
+          }
+          feach('/api/Online/getOnline', 'get', data)
+            .then(res => {
+              console.log(res.data.data)
+              this.setData({
+                Onlineprice: res.data.data.price,
+                duration: res.data.data.duration,
+                distance: res.data.data.distance,
+              })
+            })
+        }
+      }
     })
-  },
-  SaveEnd:function(){
-    let res = this.openMap()
-    this.setData({
-      start: res.address,
-      EndLatitude: res.latitude,
-      EndLongitude: res.longitude,
-    })
-    if(this.data.startLatitude){
-      let Startlatitude = this.data.startLatitude,
-      Startlongitude = this.data.startLongitude,
-      Endlatitude = res.latitude,
-      Endlongitude = res.longitude
-      let x = Startlatitude-Endlatitude
-      let y = StartLongitude-Endlongitude
-      let dis = Math.sqrt(x*x+y*y)
-    console.log(dis)
-    }
 
-    
+  },
+  SaveEnd: function () {
+    let that = this
+    wx.chooseLocation({
+      success(res) {
+        that.setData({
+          end: res.address,
+          EndLatitude: res.latitude,
+          EndLongitude: res.longitude,
+        })
+        if (that.data.startLatitude) {
+          let data = {
+            origin: that.data.startLatitude + ',' + that.data.startLongitude,
+            destination: that.data.EndLatitude + ',' + that.data.EndLongitude
+          }
+          feach('/api/Online/getOnline', 'get', data)
+            .then(res => {
+              console.log(res.data.data)
+              this.setData({
+                Onlineprice: res.data.data.price,
+                duration: res.data.data.duration,
+                distance: res.data.data.distance,
+              })
+            })
+        }
+      }
+    })
+
   },
   sendCode:function(){
+    if (this.data.sendcode !== '获取验证码') return;
     let data = {
         marker:1,
         phone:this.data.phone,
@@ -89,7 +114,29 @@ Page({
         showCancel:false
       })
     }
-    feach('/api/Base/sendCode','get',data).then(res=>{
+    feach('/api/Base/sendCode','get',data)
+    .then(res=>{
+      if (res.data.code == 0) {
+        let timernum = 120
+        this.setData({
+          sendcode: '已发送(120)'
+        })
+        clearInterval(timer)
+        let timer = setInterval(() => {
+          --timernum
+          if (timernum <= 0) {
+            this.setData({
+              sendcode: '获取验证码'
+            })
+            clearInterval(timer);
+            return;
+          }
+          this.setData({
+            sendcode: '已发送(' + timernum + ')'
+          })
+        }, 1000)
+        return;
+      }
       wx.showModal({
         title: '温馨提示',
         content: res.data.msg,
@@ -99,17 +146,32 @@ Page({
   },
 submit:function(){
   let data = {
-      start:'',
-      end:'',
-      go_time:'',
-      count:'',
-      marker:'',
-      price:'',
-      mobile:'',
-      code:''
+    start: this.data.start,
+    end: this.data.end,
+    go_time: this.data.go_Date + ' ' + this.data.go_time,
+    count: this.data.count,
+    marker: this.data.marker,
+    price: this.data.price,
+    mobile: this.data.phone,
+    code: this.data.code,
+    start_longitude: this.data.startLongitude,
+    start_latitude: this.data.startLatitude,
+    end_longitude: this.data.EndLongitude,
+    end_latitude: this.data.EndLatitude,
   }
   feach('/api/Release/DriverRelease','post',data)
   .then(res=>{
+    if (res.data.code == 0) {
+      wx.showModal({
+        title: '温馨提示',
+        content: res.data.msg,
+        showCancel: false,
+        success: () => {
+          wx.navigateBack({})
+        }
+      })
+      return;
+    }
     wx.showModal({
       title: '温馨提示',
       content: res.data.msg,

@@ -3,6 +3,6 @@
   <image src='./img/success.svg' class='img-ico'></image>
   <view class='submit-text'>
     <view>审核完毕</view>
-    <text>该条信息已审核通过，将通知到本人</text>
+    <text>该条信息已审核通过.</text>
   </view>
 </view>

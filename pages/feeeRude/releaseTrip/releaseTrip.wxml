@@ -1,3 +1,59 @@
+<!-- <view class='top-input' bindtap='SaveStart'>
+<test class="left-title">出发地址</test>
+<view>{{start}}</view>
+</view>
+<view class='top-input' bindtap='SaveEnd'>
+<test class="left-title">目标地址</test>
+<view>{{end}}</view>
+</view>
+<view class='top-input'>
+<test class="left-title">乘车人数</test>
+<input type='number' placeholder='请输入乘车人数' bindinput='SaveCount'></input>
+</view>
+
+<view class='top-input'>
+<test class="left-title">乘车价格</test>
+<input type='number' placeholder='请输入可接受价格' bindinput='SavePrice'></input>
+</view>
+<view class='top-input'>
+<test class="left-title">出发时间</test>
+<picker
+    style='margin-right:20rpx'
+    mode="date"
+    value="{{go_Date}}"
+    bindchange="SaveDate"
+  >
+    <view class="picker">
+    {{go_Date}}
+    </view>
+  </picker>
+<picker
+    mode="time"
+    value="{{go_time}}"
+    bindchange="SaveTime"
+  >
+    <view class="picker">
+    {{go_time}}
+    </view>
+  </picker>
+</view>
+<view class='top-input'>
+<test class="left-title">手机号</test>
+<input value="{{phone}}" maxlength='11' placeholder='请输入手机号' bindinput='Savephone'></input>
+</view>
+<view class='top-input'>
+<test class="left-title">验证码</test>
+<input placeholder='请输入短信验证码' bindinput='SaveCode'></input>
+<test class="sendCode" bindtap="sendCode">{{sendcode}}</test>
+</view>
+<view class='top-input'>
+<test class="left-title">备注</test>
+<input placeholder='请输入备注' bindinput='SaveMarker'></input>
+</view>
+
+
+<button class='submitbtn' bindtap="submit">提交</button> -->
+
 
 <view>
   <view class='title'>信息填写</view>
