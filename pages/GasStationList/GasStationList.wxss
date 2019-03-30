@@ -1,22 +1,80 @@
 /* pages/GasStationList/GasStationList.wxss */
+page{
+  background: #f2f3f4;
+}
 @font-face {
-  font-family: 'iconfont';  /* project id 1105111 */
-  src: url('//at.alicdn.com/t/font_1105111_6td2j4m9lti.eot');
-  src: url('//at.alicdn.com/t/font_1105111_6td2j4m9lti.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1105111_6td2j4m9lti.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1105111_6td2j4m9lti.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1105111_6td2j4m9lti.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1105111_6td2j4m9lti.svg#iconfont') format('svg');
+  font-family: 'iconfont';  /* project id 1105109 */
+  src: url('//at.alicdn.com/t/font_1105109_cchazuqinz.eot');
+  src: url('//at.alicdn.com/t/font_1105109_cchazuqinz.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1105109_cchazuqinz.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1105109_cchazuqinz.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1105109_cchazuqinz.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1105109_cchazuqinz.svg#iconfont') format('svg');
 }
 .iconfont {
-    font-family: "iconfont" !important;
-    font-size: 16px;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.icon_Gas::before{
-  content:"\e6b9";
+.icon_xiche::before{
+  content:"\e632";
   font-size: 20px;
+  color: #f8935a;
+}
+.icon_daohang::before{
+  content:"\e640";
+  font-size: 20px;
+  color:#4a4d5b;
+}
+.icon_star::before{
+  content:"\e70b";
+  font-size: 14px;
+  color: #f8935a;
+}
+.list-total{
+  height: 200rpx;
+  display: flex;
+  margin-bottom: 10rpx;
+  background: white;
+  border-top: 1rpx solid #f2f3f4;
+}
+.list-left{
+  width: 90rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+}
+.list-center{
+  flex: 1;
+}
+.list-right{
+  margin-right: 90rpx;
+  margin-top: 50rpx;
+  width: 50rpx;
+}
+.list-title{
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10rpx;
+}
+.list-address{
+  font-size: 12px;
+  margin-top: 10rpx;
+  color:#9a9a9a;
+}
+.list-rate{
+  font-size: 12px;
+  margin-left: 10rpx;
+  color:#9a9a9a;
+}
+.list-money{
+  margin-left: 10rpx;
+  font-size: 20px;
+  font-weight: bold;
+}
+.list-price{
+  margin-left: 20rpx;
+  background: #6ea863;
+  color:white;
 }

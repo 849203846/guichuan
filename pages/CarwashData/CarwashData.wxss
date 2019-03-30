@@ -201,6 +201,7 @@
 }
 .top-third-money{
   display: flex;
+  padding-top: 10rpx;
 }
 .top-third-money-left{
   flex: 1;
@@ -216,5 +217,8 @@
   color:#6ea863;
 }
 .button-yinxiang{
+  padding-left: 20rpx;
+}
+.apply-content{
   padding-left: 20rpx;
 }

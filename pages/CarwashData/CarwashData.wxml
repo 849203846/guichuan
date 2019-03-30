@@ -47,8 +47,7 @@
   </view>
   <view>
    <view class='top-second-title'>实时订单</view>
-
-
+   <view class='apply-content'>
     <view class='top-third-msg'>
       <i class='iconfont icon_block top-third-avatar'></i>
       <text class='top-third-name'>张车主</text>
@@ -91,6 +90,7 @@
           <text class='top-third-money-center'>消费：￥88.88</text>
           <text class='top-third-money-right'>节省：<text class='top-third-money-right-color'>￥99.99</text></text>
      </view>
+    </view>
     </view>
   </view>
 </view>

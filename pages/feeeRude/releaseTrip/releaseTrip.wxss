@@ -1,1 +1,42 @@
 /* pages/feeeRude/releaseTrip/releaseTrip.wxss */
+page{
+  background: #f4f4f4;
+}
+.title{
+  height:60rpx;
+  padding-left: 20rpx;
+  line-height: 60rpx;
+  color: #9a9a9a;
+}
+.first-block{
+  background: white;
+}
+.first-one{
+  padding-left: 20rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 1px solid #ededed;
+}
+.first-one input {
+  flex: 1;
+  margin-left: 40rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+.car-number{
+  display: flex;
+}
+.submitBtn{
+  margin-top: 20rpx;
+  width: 90%;
+  text-align: center;
+  background: #4a4d5b;
+  color: white;
+}
+.first-one picker {
+  margin-left: 40rpx;
+}
+
+.yz-btn{
+  margin-right: 40rpx;
+}
