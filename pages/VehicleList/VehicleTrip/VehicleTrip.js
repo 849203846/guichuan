@@ -3,26 +3,23 @@ import {
 } from '../../../utils/util.js'
 Page({
   data: {
-    go_time:'2019:03'
+    go_Date:'',
+    go_time:'',
+    sendcode:'获取验证码'
   },
   onLoad(opc){
-    let flag = opc.flag
+    let time = new Date();
     this.setData({
-      flag,
-    })
-    feach('/admin/Driver/getDriverByStatus','get',{})
-    .then(res=>{
-      console.log(res)
+      go_Date: time.getFullYear() + '-' + (time.getMonth()+1)+'-'+time.getDate(),
+      go_time: time.getHours()+':'+time.getMinutes()
     })
   },
   SaveCount:function(e){
-    console.log(e.detail.value)
     this.setData({
       count:e.detail.value,
     })
   },
   SaveMarker: function (e) {
-    console.log(e.detail.value)
     this.setData({
       marker: e.detail.value,
     })
@@ -82,7 +79,7 @@ Page({
     wx.chooseLocation({
       success(res) {
         that.setData({
-      start: res.address,
+      end: res.address,
       EndLatitude: res.latitude,
       EndLongitude: res.longitude,
     })
@@ -106,8 +103,9 @@ Page({
     
   },
   sendCode:function(){
+    if (this.data.sendcode!=='获取验证码')return;
     let data = {
-        marker:1,
+        marker:2,
         phone:this.data.phone,
     }
     if (data.phone == '' || data.phone.length!==11){
@@ -118,6 +116,28 @@ Page({
       })
     }
     feach('/api/Base/sendCode','get',data).then(res=>{
+      console.log(res.data)
+      if(res.data.code==0){
+        let timernum = 120
+        this.setData({
+          sendcode:'已发送(120)'
+        })
+        clearInterval(timer)
+        let timer = setInterval(()=>{
+          --timernum
+          if (timernum<=0){
+            this.setData({
+              sendcode: '获取验证码'
+            })
+            clearInterval(timer);
+            return;
+          }
+          this.setData({
+            sendcode:'已发送('+timernum+')'
+          })
+        },1000)
+        return;
+      }
       wx.showModal({
         title: '温馨提示',
         content: res.data.msg,
@@ -129,19 +149,30 @@ submit:function(){
   let data = {
       start:this.data.start,
       end:this.data.end,
-      go_time:this.data.go_time,
+    go_time: this.data.go_Date+' '+this.data.go_time,
       count:this.data.count,
       marker:this.data.marker,
       price:this.data.price,
-      mobile:this.data.mobile,
+      mobile:this.data.phone,
       code:this.data.code,
-    start_longitude: this.data.start_longitude,
-    start_latitude: this.data.start_latitude,
-    end_longitude: this.data.end_longitude,
-    end_latitude: this.data.end_latitude,
+    start_longitude: this.data.startLongitude,
+    start_latitude: this.data.startLatitude,
+    end_longitude: this.data.EndLongitude,
+    end_latitude: this.data.EndLatitude,
   }
   feach('/api/Release/UserRelease','post',data)
   .then(res=>{
+    if(res.data.code==0){
+      wx.showModal({
+        title: '温馨提示',
+        content: res.data.msg,
+        showCancel:false,
+        success:()=>{
+          wx.navigateBack({})
+        }
+      })
+      return;
+    }
     wx.showModal({
       title: '温馨提示',
       content: res.data.msg,
@@ -150,9 +181,13 @@ submit:function(){
   })
 },
 SaveTime:function(e){
-  console.log(e.detail.value)
   this.setData({
     go_time:e.detail.value
   })
-}
+},
+  SaveDate:function(e){
+    this.setData({
+      go_Date: e.detail.value
+    })
+  }
 })

@@ -1,8 +1,23 @@
 
-<block wx:for="{{list}}" key="{{item.index}}">
-<view>{{item.start}}</view>
+<navigator wx:for="{{list}}" wx:key="{{item.index}}" url='./detail/detail?id={{item.id}}'>
+<view class='item'>
+<view>
+<text>开始位置：</text>
+<text>{{item.start}}</text>
+</view>
+<view>
+<text>目的地</text>
+<text>{{item.end}}</text>
+</view>
+<view>
+<text>预计出发时间</text>
+<text>{{item.go_time}}</text>
+</view>
+<text class="price">{{item.price}}￥</text>
+</view>
+
 <!-- 
-start（开始位置） start_longitude（开始位置经度） start_latitude（科室位置纬度） end（结束位置） end_longitude（结束位置经度） end_latitude（结束位置纬度） go_time（出发时间） count（乘坐人数） marker（乘车备注） inputtime（发布日期） status（行程状态） price（乘车价格）  mobile（手机号） uid(用户id) nickname（用户微信昵称） thumb(用户微信头像)
+id（订单id） start（开始位置） start_longitude（开始位置经度） start_latitude（开始位置纬度） end（结束位置） end_longitude（结束位置经度） end_latitude（结束位置纬度） go_time（出发时间） count（乘坐人数） marker（乘车备注） inputtime（发布日期） status（行程状态） price（乘车价格） mobile（手机号） real_name（司机真实姓名） uid（司机用户id） thumb（头像）
  -->
-</block>
-<navigator url="./releaseTrip/releaseTrip?flag={{flag}}">发布行程</navigator>
+</navigator>
+<navigator class='btn' url="./releaseTrip/releaseTrip?flag={{flag}}">发布行程</navigator>

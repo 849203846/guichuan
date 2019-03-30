@@ -10,7 +10,7 @@ Page({
     car_color: '',
     car_register: '点击选择日期',
   },
-  onLoad:function(){
+  onLoads:function(){
     feach('/api/Driver/getDriverStatus','get',{})
     .then(res=>{
       console.log(res.data.data.status)
@@ -18,14 +18,14 @@ Page({
         wx.reLaunch({
           url: '../Inaudit/Inaudit',
         })
-      } else if (res.data.data.status === '2'){
+      } else if (res.data.data.status === '2' || res.data.data.status === '6'){
         //顺风车认证页面
         wx.reLaunch({
           url: '../VehicleOwner/VehicleOwner',
         })
       } else if (res.data.data.status === '3'){
         wx.reLaunch({
-          url: '../Inaudit/Inaudit',
+          url: '../approvalSuccess/approvalSuccess',
         })
       } else if (res.data.data.status === '4'){
         wx.showModal({

@@ -1,16 +1,21 @@
 {
   "pages": [
+      "pages/index/index",
+      "pages/VehicleOwner/VehicleOwner",
+ 
+      "pages/feeeRude/feeeRude",
+      "pages/feeeRude/detail/detail",
     "pages/VehicleList/VehicleList",
-    "pages/VehicleTrip/VehicleTrip",
-        "pages/feeeRude/feeeRude",    
+    "pages/VehicleList/VehicleTrip/VehicleTrip",
+    "pages/VehicleList/detail/detail",
         "pages/CarwashData/CarwashData",
     "pages/Select/Select",
     "pages/feeeRude/releaseTrip/releaseTrip",
     "pages/GasStationList/GasStationList",
     "pages/CarwashList/CarwashList",
     "pages/approvalList/approvalList",
-    "pages/VehicleOwner/VehicleOwner",
-    "pages/index/index",
+  
+   
     "pages/login/login",
     "pages/approvalReject/approvalReject",
     "pages/approvalSuccess/approvalSuccess",
@@ -24,7 +29,6 @@
     "pages/CRMCarwashList/CRMCarwashList",
     "pages/GasstationData/GasstationData",
     "pages/detailsShop/detailsShop"
-
   ],
   "window": {
     "backgroundTextStyle": "light",

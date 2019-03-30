@@ -1,48 +1,61 @@
 
-<view bindtap='SaveStart'>
-<test>出发地址</test>
-<text>{{start}}</text>
+<view class='top-input' bindtap='SaveStart'>
+<test class="left-title">出发地址</test>
+<view>{{start}}</view>
 </view>
-<view bindtap='SaveEnd'>
-<test>目标地址</test>
-<text>{{end}}</text>
+<view class='top-input' bindtap='SaveEnd'>
+<test class="left-title">目标地址</test>
+<view>{{end}}</view>
 </view>
-<view>
-<test>乘车人数</test>
-<input type='number' bindinput='SaveCount'></input>
+<view class='top-input'>
+<test class="left-title">乘车人数</test>
+<input type='number' placeholder='请输入乘车人数' bindinput='SaveCount'></input>
 </view>
-<view>
-<test>备注</test>
-<input placeholder='请输入备注' bindinput='SaveMarker'></input>
-</view>
-<view>
-<test>乘车价格</test>
+
+<view class='top-input'>
+<test class="left-title">乘车价格</test>
 <input type='number' placeholder='请输入可接受价格' bindinput='SavePrice'></input>
 </view>
-<view>
-<test>手机号</test>
-<input value="{{phone}}" bindinput='Savephone'></input>
-</view>
-<view>
-<test>验证码</test>
-<input bindinput='SaveCode'></input>
-<test bindtap="sendCode">发送验证码</test>
-</view>
-
-
-
-
-
-<view>
-<test>出发时间</test>
+<view class='top-input'>
+<test class="left-title">出发时间</test>
 <picker
+    style='margin-right:20rpx'
     mode="date"
+    value="{{go_Date}}"
+    bindchange="SaveDate"
+  >
+    <view class="picker">
+    {{go_Date}}
+    </view>
+  </picker>
+<picker
+    mode="time"
     value="{{go_time}}"
     bindchange="SaveTime"
   >
     <view class="picker">
-      当前选择: {{go_time}}
+    {{go_time}}
     </view>
   </picker>
 </view>
-<button bindtap="submit">提交</button>
+<view class='top-input'>
+<test class="left-title">手机号</test>
+<input value="{{phone}}" maxlength='11' placeholder='请输入手机号' bindinput='Savephone'></input>
+</view>
+<view class='top-input'>
+<test class="left-title">验证码</test>
+<input placeholder='请输入短信验证码' bindinput='SaveCode'></input>
+<test class="sendCode" bindtap="sendCode">{{sendcode}}</test>
+</view>
+<view class='top-input'>
+<test class="left-title">备注</test>
+<input placeholder='请输入备注' bindinput='SaveMarker'></input>
+</view>
+
+
+
+
+
+
+
+<button class='submitbtn' bindtap="submit">提交</button>
