@@ -1,14 +1,14 @@
 {
   "pages": [
-
+    "pages/approvalList/approvalList",
     "pages/VehicleList/VehicleList",
     "pages/VehicleList/VehicleTrip/VehicleTrip",
     "pages/VehicleList/detail/detail",
 
-
+  "pages/feeeRude/feeeRude",
     "pages/feeeRude/releaseTrip/releaseTrip",
     "pages/feeeRude/detail/detail",
-    "pages/feeeRude/feeeRude",
+  
 
 
     "pages/index/index",
@@ -16,28 +16,26 @@
     "pages/Inaudit/Inaudit",
     "pages/logs/logs",
 
-
     "pages/CRMCarwashList/CRMCarwashList",
     "pages/CRMGasStationList/CRMGasStationList",
     "pages/GasStationList/GasStationList",
-
-
-    "pages/GasstationData/GasstationData",
-  
-    "pages/CarwashList/CarwashList",
-    "pages/CarwashData/CarwashData",
-
-
-    "pages/Select/Select",
+    "pages/detailsMsg/detailsMsg",
     "pages/GasStation/GasStation",
     "pages/Carwash/Carwash",
+
+ 
+   
+    "pages/CarwashList/CarwashList",
+    "pages/CarwashData/CarwashData",
+    "pages/GasstationData/GasstationData",
+
+   
     "pages/VehicleOwner/VehicleOwner",
     "pages/UseProtocol/UseProtocol",
-    "pages/approvalList/approvalList",
     "pages/approvalReject/approvalReject",
-    "pages/approvalSuccess/approvalSuccess",
-    "pages/detailsMsg/detailsMsg",
-    "pages/detailsShop/detailsShop"
+    "pages/approvalSuccess/approvalSuccess"
+   
+   
   ],
   "window": {
     "backgroundTextStyle": "light",

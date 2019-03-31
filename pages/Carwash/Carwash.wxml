@@ -7,7 +7,7 @@
     </view>
     <view class='top-input'>
       <text class='left-title'>导航地址:</text>
-      <input bindtap='SaveMap' disabled value="{{address}}"></input>
+      <input bindtap='SaveMap' disabled value="{{address===''?Mapname:address}}"></input>
     </view>
     <view class='top-input'>
       <text class='left-title'>描述:</text>

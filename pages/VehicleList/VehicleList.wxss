@@ -90,7 +90,7 @@ page{
 .list-left{
   width: 90rpx;
   margin-left: 30rpx;
-  margin-top: 30rpx;
+  margin-top: 20rpx 30rpx;
 }
 .list-center{
   flex: 1;
@@ -101,16 +101,24 @@ page{
   width: 50rpx;
 }
 .list-title{
-  font-size: 14px;
-  margin-top: 10rpx;
+  font-size: 14rpx;
+  /* margin-top: 10rpx; */
 }
 .list-address{
-  font-size: 12px;
-  margin-top: 10rpx;
+  font-size: 12rpx;
+  margin-top: 5rpx;
   color:#9a9a9a;
 }
+.list-address>text{
+     white-space: nowrap;  
+ text-overflow:ellipsis; 
+   word-break:nowrap;
+   display: inline-block;
+   max-width: 400rpx;
+   overflow: hidden;
+}
 .list-time{
-  margin-top: 10rpx;
+  margin-top: 5rpx;
   color:#9a9a9a;
 }
 .list-rate{

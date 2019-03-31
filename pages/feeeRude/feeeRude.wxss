@@ -101,12 +101,25 @@ page{
 }
 .list-title{
   font-size: 14px;
-  margin-top: 10rpx;
+  /* margin-top: 10rpx; */
 }
 .list-address{
   font-size: 12px;
   margin-top: 10rpx;
   color:#9a9a9a;
+   word-break:nowrap;
+    white-space: nowrap;  
+ text-overflow:ellipsis; 
+ overflow:hidden;
+   line-height: 12px;
+}
+.list-address>text{
+     white-space: nowrap;  
+ text-overflow:ellipsis; 
+   word-break:nowrap;
+   display: inline-block;
+   max-width: 400rpx;
+   overflow: hidden;
 }
 .list-time{
   margin-top: 10rpx;
