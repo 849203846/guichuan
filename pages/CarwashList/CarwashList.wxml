@@ -15,6 +15,7 @@
       <view>
         <text class='list-rate'>原价：</text>
         <text class='list-money'>8.88元</text>
+        <text class='list-price'>认证优惠9.99元</text>
       </view>
     </view>
     <view class='list-right'>

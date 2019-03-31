@@ -34,7 +34,7 @@ page{
   color: #f8935a;
 }
 .list-total{
-  height: 200rpx;
+  height: 220rpx;
   display: flex;
   margin-bottom: 10rpx;
   background: white;
@@ -70,11 +70,12 @@ page{
 }
 .list-money{
   margin-left: 10rpx;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
 }
 .list-price{
   margin-left: 20rpx;
   background: #6ea863;
   color:white;
+  font-size: 26rpx;
 }
