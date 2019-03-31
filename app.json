@@ -1,6 +1,6 @@
 {
   "pages": [
-  
+  "pages/CRMCarwashList/CRMCarwashList",
   "pages/GasStationList/GasStationList",
    
     "pages/VehicleOwner/VehicleOwner",
@@ -23,7 +23,7 @@
    
 
 "pages/approvalList/approvalList",
-    "pages/CRMCarwashList/CRMCarwashList",
+    
     "pages/CRMGasStationList/CRMGasStationList",
     
     "pages/detailsMsg/detailsMsg",

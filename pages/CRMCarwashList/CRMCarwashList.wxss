@@ -1,3 +1,6 @@
+page{
+  background: #f2f3f4;
+}
 .add{
   width: 100%;
   position: fixed;
@@ -10,16 +13,16 @@
   color: white;
 }
 navigator{
-  width: 99.5%;
-  margin: 0 auto;
-  border: 1px solid #333;
+  width: 95%;
+  margin: 10rpx auto;
   border-top: none;
   height: 120rpx;
   display: flex;
+  background: white;
 }
-navigator:nth-child(1){
+/* navigator:nth-child(1){
   border: 1px solid #333;
-}
+} */
 navigator>view{
   flex: 1;
   display: flex;
@@ -31,4 +34,8 @@ navigator>view>view{
   padding-left: 20rpx;
   display: flex;
   line-height: 60rpx;
+}
+.shop-msg{
+  padding-left: 20rpx;
+  color:#9a9a9a;
 }
