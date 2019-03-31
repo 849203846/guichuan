@@ -11,23 +11,73 @@ Page({
     latitude: '',
     thumb: '',//图片
     description: "",//描述
-    original_price: '',//原价
     phone: '',//手机号
-    real_price: '',//当前价格
+    OilList: [{
+      carwash_type: '',
+      real_price: '',
+      original_price: ''
+    },]
   },
   onLoad: function (options) {
     if (options.id){
       feach('/admin/Carwash/getCarwashData', 'get', { id: options.id})
       .then(res=>{
         console.log(res.data.data)
+        let OilList = JSON.parse(res.data.data.product)
         this.setData({
           id: options.id,
-          ...res.data.data
+          ...res.data.data,
+          OilList
         })
       })
     }
   },
 
+  SaveGasoline_type: function (e) {
+    let index = e.target.dataset.index
+    let OilList = this.data.OilList
+    OilList[index].carwash_type = e.detail.value
+    this.setData({
+      OilList,
+    })
+  },
+  SaveReal_price: function (e) {
+    let index = e.target.dataset.index
+    let OilList = this.data.OilList
+    OilList[index].real_price = e.detail.value
+    this.setData({
+      OilList,
+    })
+  },
+  SaveOriginal_price: function (e) {
+    let index = e.target.dataset.index
+    let OilList = this.data.OilList
+    OilList[index].original_price = e.detail.value
+    this.setData({
+      OilList,
+    })
+  },
+  delOilList: function (e) {
+    let index = e.target.dataset.index
+    let OilList = this.data.OilList
+    if (OilList.length <= 1) return;
+    OilList.splice(index, 1);
+    this.setData({
+      OilList,
+    })
+  },
+  addOilList: function () {
+    let OilList = this.data.OilList
+    let item = {
+      carwash_type: '',
+      real_price: '',
+      original_price: ''
+    }
+    OilList.push(item);
+    this.setData({
+      OilList,
+    })
+  },
   SaveMap: function () {
     wx.chooseLocation({
       success: (res) => {
@@ -54,6 +104,9 @@ Page({
     this.setData(data)
   },
   saveGasStation: function () {
+    if (this.data.OilList.length === 1 && this.data.OilList[0].carwash_type === '') {
+      return;
+    }
     let data = {
       name: this.data.name,
       address: this.data.address,
@@ -61,9 +114,8 @@ Page({
       latitude: this.data.latitude,
       thumb: this.data.thumb,
       description: this.data.description,
-      original_price: this.data.original_price,
-      phone: this.data.phone,
-      real_price: this.data.real_price,
+      phone: this.data.phone, 
+      product:JSON.stringify(this.data.OilList),
     }
     console.log(data);
     if (!data.name) {
@@ -77,12 +129,6 @@ Page({
       return
     } else if (!data.description) {
       this.alert('请输入店铺描述')
-      return
-    } else if (!data.original_price) {
-      this.alert('请输入原价')
-      return
-    } else if (!data.real_price) {
-      this.alert('请输入优惠价格')
       return
     } else if (!data.thumb){
       this.alert('请上传图片')

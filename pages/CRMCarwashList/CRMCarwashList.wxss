@@ -5,8 +5,9 @@
   bottom: 0;
   height: 88rpx;
   text-align: center;
-  background: lightblue;
+  background: #4a4d5b;
   line-height: 88rpx;
+  color: white;
 }
 navigator{
   width: 99.5%;

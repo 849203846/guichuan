@@ -37,5 +37,5 @@
   margin-top: 20px;
   color:#fff;
   font-weight: bold;
-  background: rgb(204, 68, 4);
+  background: #4a4d5b;
 }

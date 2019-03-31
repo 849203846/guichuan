@@ -1,4 +1,3 @@
-
 <view>
   <view class='top-title'>驾驶证信息</view>
   <view>
@@ -7,56 +6,59 @@
       <text>{{real_name}}</text>
     </view>
     <view class='top-input'>
-      <text  class='left-title'>车主电话:</text>
+      <text class='left-title'>车主电话:</text>
       <text>{{mobile}}</text>
     </view>
     <view class='top-input'>
-      <text  class='left-title'>身份证号:</text>
-     <text>{{id_num}}</text>
+      <text class='left-title'>身份证号:</text>
+      <text>{{id_num}}</text>
     </view>
   </view>
   <view class='top-title'>行驶证信息</view>
   <view>
     <view class='top-input'>
-      <text  class='left-title'>车型:</text>
+      <text class='left-title'>车型:</text>
       <text>{{car_brand}}</text>
     </view>
     <view class='top-input'>
-      <text  class='left-title'>车牌号:</text>
+      <text class='left-title'>车牌号:</text>
       <text>{{car_num}}</text>
     </view>
     <view class='top-input'>
-      <text  class='left-title'>车辆颜色:</text>
+      <text class='left-title'>车辆颜色:</text>
       <text>{{car_color}}</text>
     </view>
     <view class='top-input'>
-      <text  class='left-title'>车辆所有人:</text>
+      <text class='left-title'>车辆所有人:</text>
       <text>{{car_own}}</text>
     </view>
     <view class='top-input'>
-      <text  class='left-title'>车辆注册日期:</text>
+      <text class='left-title'>车辆注册日期:</text>
       <text>{{car_register}}</text>
     </view>
   </view>
-  <view>
-  <view class='top-title'>身份证照片</view>
-  <view class='idimgbox'>
-    <image class='idimg' src='http://cx.bjlingdi.com{{id_front_img}}'></image>
-    <image class='idimg' src='http://cx.bjlingdi.com{{id_back_img}}'></image>
+  <view wx:if="{{id_front_img}}">
+    <block wx:if="{{id_front_img}}"></block>
+      <view class='top-title'>身份证照片</view>
+      <view class='idimgbox'>
+        <image class='idimg' src='http://cx.bjlingdi.com{{id_front_img}}'></image>
+        <image class='idimg' src='http://cx.bjlingdi.com{{id_back_img}}'></image>
+      </view>
+      <view class='top-title'>汽车行驶证</view>
+      <image class='car_travel_img' src='http://cx.bjlingdi.com{{car_travel_img}}'>
+      </image>
+      <view class='top-title'>驾照</view>
+      <image class='car_drive_img' src='http://cx.bjlingdi.com{{car_drive_img}}'></image>
+      <view class='top-title'>汽车外观照片</view>
+      <image class='car_img' src='http://cx.bjlingdi.com{{car_img}}'></image>
   </view>
-  <view class='top-title'>汽车行驶证</view>
-  <image class='car_travel_img' src='http://cx.bjlingdi.com{{car_travel_img}}'>
-    </image>
-    <view class='top-title'>驾照</view>
-    <image class='car_drive_img' src='http://cx.bjlingdi.com{{car_drive_img}}'></image>
-    <view class='top-title'>汽车外观照片</view>
-    <image class='car_img' src='http://cx.bjlingdi.com{{car_img}}'></image>
-</view>
+
   <view class='flooter-btn'>
     <button type='primary' bindtap='flooterbtn' class='flooter-btn-left'>审批通过</button>
-    <button type='warn'  bindtap='jvjve' class='flooter-btn-right'>审批拒绝</button>
+    <button type='warn' bindtap='jvjve' class='flooter-btn-right'>审批拒绝</button>
   </view>
 </view>
+
 
 <view class='alert' style='display:{{alert}}'>
   <view class='alertContent'>

@@ -40,6 +40,9 @@
 .flooter-btn-left {
   display: inline-block;
   width: 40%;
+    height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
   margin-right: 10rpx;
 }
 
@@ -47,6 +50,10 @@
   display: inline-block;
   width: 40%;
   margin-left: 10rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+
 }
 .alert{
   width: 100%;

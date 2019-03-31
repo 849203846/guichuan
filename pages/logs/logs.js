@@ -5,8 +5,10 @@ Page({
   data: {
     logs: []
   },
-  onLoad: function () {
-
+  onLoad: function (opction) {
+    this.setData({
+      url:opction.url,
+    })
   },
   bindgetuserinfo(e){
     console.log(e)
@@ -14,8 +16,8 @@ Page({
       key: 'userInfo',
       data: e.detail.userInfo,
     })
-    wx.navigateBack({
-      delta:1
+    wx.reLaunch({
+      url: this.data.url,
     })
   }
 })

@@ -1,6 +1,6 @@
 /* pages/login/login.wxss */
 .top-tite{
-  margin: 20rpx 0 20rpx 20rpx;
+  margin: 20rpx;
 }
 .top-tite-first{
   color:#4a4a4a;
@@ -57,4 +57,7 @@
 .login-submit{
   background: #4a4d5b;
   color:white;
+  border-radius: 50rpx;
+  height: 88rpx;
+  line-height: 88rpx;
 }

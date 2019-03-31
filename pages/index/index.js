@@ -10,7 +10,7 @@ Page({
     car_color: '',
     car_register: '点击选择日期',
   },
-  onLoads:function(){
+  onLoad:function(){
     feach('/api/Driver/getDriverStatus','get',{})
     .then(res=>{
       console.log(res.data.data.status)

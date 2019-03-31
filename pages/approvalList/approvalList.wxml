@@ -10,7 +10,8 @@
         <view>姓名：{{item.real_name}}</view>
         <view>电话：{{item.mobile}}</view>
       </view>
-      <view class='list-msg-right' style="color:{{item.status==1?'red':item.status==2?'blue':item.status==3?'blue':item.status==4?'blue':'blue'}}">{{item.status==1?'未审核':item.status==2?'汽车认证通过':item.status==3?'顺风车资格认证通过':item.status==4?'汽车认证不通过':'顺风车不通过'}}</view>
+      <view class='list-msg-right' style="color:blue;">待审核</view>
+      <!-- <view class='list-msg-right' style="color:{{item.status==1?'red':item.status==2?'blue':item.status==3?'blue':item.status==4?'blue':'blue'}}">{{item.status==1?'未审核':item.status==2?'汽车认证通过':item.status==3?'顺风车资格认证通过':item.status==4?'汽车认证不通过':'顺风车不通过'}}</view> -->
     </navigator>
   </block>
   <view class='footer'>

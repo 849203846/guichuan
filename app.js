@@ -14,6 +14,7 @@ App({
         .then(res=>{
           wx.hideLoading();
           wx.setStorageSync('openid', res.data.data)
+          console.log(res.data.data)
           this.GetuserInfo(res.data.data)
         })
       }

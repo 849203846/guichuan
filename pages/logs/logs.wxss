@@ -6,3 +6,10 @@
 .log-item {
   margin: 10rpx;
 }
+.content{
+  width: 90%;
+  margin: 0 auto;
+}
+button{
+  margin-top: 30rpx;
+}

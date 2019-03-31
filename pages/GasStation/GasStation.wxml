@@ -32,7 +32,7 @@
       <text>#，原价:</text>
       <input bindinput='SaveCar_brand' value='{{item.real_price}}' type='number' bindinput='SaveReal_price' data-index='{{index}}'  placeholder-class='oilclass' placeholder='例：7'></input>
       <text>元，优惠价:</text>
-      <input bindinput='SaveCar_brand' value='{{item.original_price}}' type='number' bindinput='SaveOriginal_price' data-index='{{index}}'   placeholder-class='oilclass' placeholder='例：6.99'></input>
+      <input bindinput='SaveCar_brand' value='{{item.original_price}}' type='number' bindinput='SaveOriginal_price' data-index='{{index}}'   placeholder-class='oilclass' placeholder='例：6.11'></input>
       <text>元</text>
         <text bindtap='delOilList' data-index='{{index}}'>㊀</text>
     </view>

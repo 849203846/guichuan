@@ -1,6 +1,11 @@
 {
   "pages": [
-    "pages/approvalList/approvalList",
+  
+    "pages/VehicleOwner/VehicleOwner",
+"pages/index/index",
+
+
+       
     "pages/VehicleList/VehicleList",
     "pages/VehicleList/VehicleTrip/VehicleTrip",
     "pages/VehicleList/detail/detail",
@@ -11,11 +16,11 @@
   
 
 
-    "pages/index/index",
     "pages/login/login",
-    "pages/Inaudit/Inaudit",
     "pages/logs/logs",
+   
 
+"pages/approvalList/approvalList",
     "pages/CRMCarwashList/CRMCarwashList",
     "pages/CRMGasStationList/CRMGasStationList",
     "pages/GasStationList/GasStationList",
@@ -25,12 +30,12 @@
 
  
    
-    "pages/CarwashList/CarwashList",
+"pages/CarwashList/CarwashList",
     "pages/CarwashData/CarwashData",
     "pages/GasstationData/GasstationData",
 
-   
-    "pages/VehicleOwner/VehicleOwner",
+  "pages/Inaudit/Inaudit",
+    
     "pages/UseProtocol/UseProtocol",
     "pages/approvalReject/approvalReject",
     "pages/approvalSuccess/approvalSuccess"

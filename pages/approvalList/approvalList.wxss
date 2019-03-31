@@ -58,7 +58,9 @@ page{
   height: 66rpx;
   line-height: 66rpx;
   display: flex;
-  border-top: 1px solid #2232
+  border-top: 1px solid #2232;
+  color: white;
+  background: #4a4d5b;
 }
 .footer navigator{
   flex: 1;
