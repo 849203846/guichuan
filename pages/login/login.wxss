@@ -1,4 +1,11 @@
 /* pages/login/login.wxss */
+image{
+  width: 300rpx;
+  height: 300rpx;
+  margin: 20rpx auto;
+  display: block;
+  
+}
 .top-tite{
   margin: 20rpx;
 }

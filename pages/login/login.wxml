@@ -1,5 +1,6 @@
 <!--pages/login/login.wxml-->
 <view>
+  <image src='./images/logo.png'></image>
   <view class='top-tite'>
     <view class='top-tite-first'>请输入用户名及密码</view>
     <view class='top-tite-second'>为了方便进行登录，请输入信息，请严格保护自己的登录信息</view>

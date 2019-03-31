@@ -18,6 +18,11 @@ page{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon_jiayou::before{
+  content:"\e64a";
+  font-size: 30px;
+  color: #f8935a;
+}
 .icon_xiche::before{
   content:"\e632";
   font-size: 20px;
@@ -34,7 +39,7 @@ page{
   color: #f8935a;
 }
 .list-total{
-  height: 220rpx;
+  height: 160rpx;
   display: flex;
   margin-bottom: 10rpx;
   background: white;

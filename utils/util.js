@@ -1,13 +1,12 @@
 const feach = (url, method,data) => {
   return new Promise(function(res,rej){
-    data.openid = wx.getStorageSync('openid').openid
+    data.openid = wx.getStorageSync('openid').openid||'0000000000'
     var app = getApp()
     let reqDate = {
-      url: app.globalData.url  + url,
+      url: 'https://cx.bjlingdi.com'  + url,
       data,
       method,
       success: res,
-      fail: rej
     }
     if (method === 'post' || method === 'POST'){
       reqDate.header = {

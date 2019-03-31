@@ -23,10 +23,10 @@
 .icon_daohang{
   padding-left: 30rpx;
 }
-.icon_xiche::before{
-  content:"\e632";
-  font-size: 30px;
-  color: #9a9a9a;
+.icon_jiayou::before{
+  content:"\e64a";
+  font-size: 100rpx;
+  color: #f8935a;
 }
 .icon_daohang::before{
   content:"\e640";

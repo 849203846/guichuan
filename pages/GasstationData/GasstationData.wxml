@@ -1,9 +1,9 @@
 <!--pages/GasstationData/GasstationData.wxml-->
 <view>
   <view class='top-nav'>
-    <image src='./img/123.jpg' class='img-back'></image>
+  <image src='http://cx.bjlingdi.com{{thumb}}' class='img-back'></image>
     <view class='top-icon'>
-      <i class='iconfont icon_xiche'></i>
+      <i class='iconfont icon_jiayou'></i>
     </view>
   </view>
   <view class='top-title'>{{name}}</view>
@@ -14,7 +14,7 @@
       <view class='top-center-name'>油号</view>
     </view>
     <view class='top-center'>
-      <view class='top-center-name'>指导价</view>
+      <view class='top-center-name'>优惠价</view>
     </view>
     <view class='top-right'>
       <view class='top-right-name'>指导价</view>
@@ -27,10 +27,10 @@
         <view class='top-right-price'>{{item.gasoline_type}}#</view>
       </view>
       <view class='top-center'>
-        <view class='top-center-price'>{{item.real_price}}</view>
+        <view class='top-right-price'>{{item.original_price}}</view>
       </view>
       <view class='top-right'>
-        <view class='top-right-price'>{{item.original_price}}</view>
+        <view class='top-center-price'>{{item.real_price}}</view>
       </view>
     </view>
   </block>
@@ -44,7 +44,7 @@
   <view>
     <view class='top-detail'>
       <i class='iconfont icon_block'></i>24小时营业</view>
-    <view class='top-detail'>
+    <view class='top-detail' bindtap='mkphone'>
       <i class='iconfont icon_block'></i>负责人电话：{{phone}}</view>
     <view class='top-detail' bindtap='openmap'>
       <view class='top-detail-left'>

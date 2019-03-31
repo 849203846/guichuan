@@ -2,10 +2,10 @@
 import { feach, getCurrentPageUrl} from './utils/util.js'
 App({
   onLaunch: function () {
-    wx.showLoading({
-      title: '加载中',
-      mask:true
-    })
+    // wx.showLoading({
+    //   title: '加载中',
+    //   mask:true
+    // })
     // 登录
     wx.login({
       success: res => {
@@ -16,8 +16,18 @@ App({
           wx.setStorageSync('openid', res.data.data)
           console.log(res.data.data)
           this.GetuserInfo(res.data.data)
-        })
-      }
+        },rej=>{
+          wx.showModal({
+            title: '123',
+            content: JSON.parse(rej),
+          })
+        }).catch(e=>{
+          wx.showModal({
+            title: '111',
+            content: '222',
+          })
+        });
+      },
     })
   },
   GetuserInfo(userInfo){

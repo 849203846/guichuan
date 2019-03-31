@@ -1,48 +1,32 @@
 {
   "pages": [
-  "pages/CRMCarwashList/CRMCarwashList",
-  "pages/GasStationList/GasStationList",
-   
+"pages/CarwashList/CarwashList",
+    "pages/login/login",
     "pages/VehicleOwner/VehicleOwner",
-"pages/index/index",
-
-
-       
+    "pages/index/index",
     "pages/VehicleList/VehicleList",
     "pages/VehicleList/VehicleTrip/VehicleTrip",
     "pages/VehicleList/detail/detail",
-
-  "pages/feeeRude/feeeRude",
+      "pages/feeeRude/feeeRude",
     "pages/feeeRude/releaseTrip/releaseTrip",
     "pages/feeeRude/detail/detail",
-  
-
-
-    "pages/login/login",
     "pages/logs/logs",
-   
-
-"pages/approvalList/approvalList",
-    
+    "pages/approvalList/approvalList",
+    "pages/CRMCarwashList/CRMCarwashList",
     "pages/CRMGasStationList/CRMGasStationList",
-    
+    "pages/Order/Order",
     "pages/detailsMsg/detailsMsg",
     "pages/GasStation/GasStation",
     "pages/Carwash/Carwash",
-
- 
-
-"pages/CarwashList/CarwashList",
+    
+    "pages/GasStationList/GasStationList",
     "pages/CarwashData/CarwashData",
     "pages/GasstationData/GasstationData",
-
-  "pages/Inaudit/Inaudit",
-    
+    "pages/Inaudit/Inaudit",
     "pages/UseProtocol/UseProtocol",
     "pages/approvalReject/approvalReject",
-    "pages/approvalSuccess/approvalSuccess"
-   
-   
+    "pages/approvalSuccess/approvalSuccess",
+    "pages/paySuccess/paySuccess"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -50,9 +34,9 @@
     "navigationBarTitleText": "妫川出行",
     "navigationBarTextStyle": "black"
   },
-  "permission":{
-    "scope.userLocation":{
-      "desc":"位置展示"
+  "permission": {
+    "scope.userLocation": {
+      "desc": "位置展示"
     }
   }
 }
