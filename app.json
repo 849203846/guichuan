@@ -1,6 +1,8 @@
 {
   "pages": [
   
+  "pages/GasStationList/GasStationList",
+   
     "pages/VehicleOwner/VehicleOwner",
 "pages/index/index",
 
@@ -23,13 +25,13 @@
 "pages/approvalList/approvalList",
     "pages/CRMCarwashList/CRMCarwashList",
     "pages/CRMGasStationList/CRMGasStationList",
-    "pages/GasStationList/GasStationList",
+    
     "pages/detailsMsg/detailsMsg",
     "pages/GasStation/GasStation",
     "pages/Carwash/Carwash",
 
  
-   
+
 "pages/CarwashList/CarwashList",
     "pages/CarwashData/CarwashData",
     "pages/GasstationData/GasstationData",
@@ -47,5 +49,10 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "妫川出行",
     "navigationBarTextStyle": "black"
+  },
+  "permission":{
+    "scope.userLocation":{
+      "desc":"位置展示"
+    }
   }
 }

@@ -1,5 +1,5 @@
 <!--pages/CarwashList/CarwashList.wxml-->
-<block wx:for="{{list}}">
+<block wx:for="{{list}}" wx:key="{{item.id}}">
 <navigator url='../GasstationData/GasstationData?id={{item.id}}'>
   <view class='list-total'>
     <view class='list-left'>

@@ -3,10 +3,10 @@ import {
 } from '../../utils/util.js'
 Page({
   data: {
-
+    ispay:'none',
+    price:''
   },
   onLoad: function (options) {
-    console.log(options.id)
     this.getGasstationData(options.id)
   },
   getGasstationData:function(id){
@@ -20,15 +20,39 @@ Page({
       if(res.data.code==='0'){
         this.setData({
           ...res.data.data,
-          product
+          product,
         })
       }
     })
-  },pay:function(){
+  },
+  openpay:function(){
+    this.setData({
+      ispay:'block'
+    })
+  },
+  closepay:function(){
+    this.setData({
+      ispay:'none'
+    })
+  },
+  openmap:function(){
+    wx.getLocation({
+      type: 'gcj02', 
+      latitude: this.data.latitude,
+      longitude: this.data.longitude,
+    })
+  },
+  Saveprice:function(e){
+    console.log(e.detail.value)
+    this.setData({
+      price: e.detail.value,
+    })
+  },
+  pay:function(){
     console.log(this.data.product)
     let data  = {
       id:this.data.id,
-      price:0.01,
+      price:this.data.price,
       gid: this.data.product[0].gid
     }
     feach('/api/Order/payGasstationOrder','post',data)
