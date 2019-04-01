@@ -5,14 +5,14 @@ import {
 Page({
 
   data: {
-    id_front_img:'',
-    id_back_img:'',
-    car_travel_img:'',
-    car_drive_img:'',
-    car_img:''
+    id_front_img:'/public/utilImg/01.png',
+    id_back_img:'/public/utilImg/02.png',
+    car_travel_img:'/public/utilImg/04.png',
+    car_drive_img:'/public/utilImg/03.png',
+    car_img:'/public/utilImg/06.png'
   },
 
-onLoad:function(){
+onLoads:function(){
   feach('/api/Driver/getDriverStatus', 'get', {})
   .then(res=>{
     if(res.data.data.status === '0'){

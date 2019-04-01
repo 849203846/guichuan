@@ -60,46 +60,53 @@
   <view class='first-block'>
 
     <view class='first-one' bindtap='SaveStart'>
-      <test>出发地址</test>
+      <test>出发地址：</test>
       <text>{{start}}</text>
     </view>
 
     <view class='first-one' bindtap='SaveEnd'>
-      <test>目标地址</test>
+      <test>目标地址：</test>
       <text>{{end}}</text>
     </view>
 
     <view class='first-one car-number'>
-      <test>乘车人数</test>
+      <test>乘车人数：</test>
       <input type='number' bindinput='SaveCount'></input>
     </view>
 
     <view class='first-one car-number'>
-      <test>备注</test>
-      <input placeholder='请输入备注' bindinput='SaveMarker'></input>
+      <test>乘车价格：</test>
+      <input type='number' placeholder="{{carnum?carnum:'请输入可接受价格'}}" bindinput='SavePrice'></input>
     </view>
 
     <view class='first-one car-number'>
-      <test>乘车价格</test>
-      <input type='number' placeholder='请输入可接受价格' bindinput='SavePrice'></input>
+      <test>手机号：</test>
+      <input value="{{phone}}" bindinput='Savephone' placeholder='请输入手机号'></input>
     </view>
 
     <view class='first-one car-number'>
-      <test>手机号</test>
-      <input value="{{phone}}" bindinput='Savephone'  placeholder='请输入手机号'></input>
-    </view>
-
-    <view class='first-one car-number'>
-      <test>验证码</test>
+      <test>验证码：</test>
       <input bindinput='SaveCode'></input>
-      <test class='yz-btn' bindtap="sendCode">发送验证码</test>
+      <test class='yz-btn' bindtap="sendCode">{{sendcode}}</test>
     </view>
 
     <view class='first-one car-number'>
-      <test>出发时间</test>
-      <picker mode="date" value="{{go_time}}"  bindchange="SaveTime" >
-      <view class="picker">{{go_time}}</view>
+      <test>出发时间:</test>
+      <picker style='margin-right:20rpx' mode="date" value="{{go_Date}}" bindchange="SaveDate">
+        <view class="picker">
+          {{go_Date}}
+        </view>
       </picker>
+      <picker mode="time" value="{{go_time}}" bindchange="SaveTime">
+        <view class="picker">
+          {{go_time}}
+        </view>
+      </picker>
+    </view>
+
+      <view class='first-one car-number'>
+      <test>备注：</test>
+      <input placeholder='请输入备注' bindinput='SaveMarker'></input>
     </view>
 
   </view>

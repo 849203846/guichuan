@@ -4,7 +4,8 @@ import {
 Page({
   data: {
     go_time:'2019:03',
-    sendcode:'获取验证码'
+    sendcode:'获取验证码',
+    carnum:''
   },
   onLoad(opc) {
     let time = new Date();
@@ -62,10 +63,11 @@ Page({
           feach('/api/Online/getOnline', 'get', data)
             .then(res => {
               console.log(res.data.data)
-              this.setData({
+              that.setData({
                 Onlineprice: res.data.data.price,
                 duration: res.data.data.duration,
                 distance: res.data.data.distance,
+                carnum: '共' + res.data.data.distance + ',预计价格' + res.data.data.price + '元'
               })
             })
         }
@@ -90,10 +92,11 @@ Page({
           feach('/api/Online/getOnline', 'get', data)
             .then(res => {
               console.log(res.data.data)
-              this.setData({
+              that.setData({
                 Onlineprice: res.data.data.price,
                 duration: res.data.data.duration,
                 distance: res.data.data.distance,
+                carnum: '共' + res.data.data.distance + ',预计价格' + res.data.data.price +'元'
               })
             })
         }

@@ -42,8 +42,11 @@
 .thumb{
   margin: 10rpx auto;
   width: 90%;
-  background: red;
+  min-height: 200rpx;
+  text-align: center;
+  line-height: 200rpx;
   display: block;
+  max-height: 300rpx;
 }
 .oilprice text{
   display: inline;

@@ -1,31 +1,31 @@
 
 <view class='top-input' bindtap='SaveStart'>
-<test class="left-title">出发地址</test>
+<test class="left-title">出发地址：</test>
 <view>{{start}}</view>
 </view>
 <view class='top-input' bindtap='SaveEnd'>
-<test class="left-title">目标地址</test>
+<test class="left-title">目标地址：</test>
 <view>{{end}}</view>
 </view>
 <view class='top-input'>
-<test class="left-title">乘车人数</test>
+<test class="left-title">乘车人数：</test>
 <view>{{count}}</view>
 </view>
 
 <view class='top-input'>
-<test class="left-title">乘车价格</test>
+<test class="left-title">乘车价格：</test>
 <view>{{price}}</view>
 </view>
 <view class='top-input'>
-<test class="left-title">出发时间</test>
+<test class="left-title">出发时间：</test>
 <view>{{go_time}}</view>
 </view>
 <view class='top-input'>
-<test class="left-title">手机号</test>
+<test class="left-title">手机号：</test>
 <view>{{mobile}}</view>
 </view>
 <view class='top-input'>
-<test class="left-title">备注</test>
+<test class="left-title">备注：</test>
 <view>{{marker}}</view>
 </view>
 

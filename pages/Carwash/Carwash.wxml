@@ -1,9 +1,9 @@
 <view>
-  <view class='top-title'>加油站信息录入</view>
+  <view class='top-title'>洗车店信息录入</view>
   <view>
     <view class='top-input'>
-      <text class='left-title'>加油站名称:</text>
-      <input bindinput='SaveName' data-name='name' value='{{name}}' placeholder='请输入加油站名称'></input>
+      <text class='left-title'>洗车店名称:</text>
+      <input bindinput='SaveName' data-name='name' value='{{name}}' placeholder='请输入洗车店名称'></input>
     </view>
     <view class='top-input'>
       <text class='left-title'>导航地址:</text>
@@ -36,8 +36,9 @@
         <text bindtap='delOilList' data-index='{{index}}'>㊀</text>
     </view>
   </block>
-  <view class='top-title'>加油站图片</view>
-  <image src='http://cx.bjlingdi.com{{thumb}}' class='thumb' bindtap='upimg'></image>
+  <view class='top-title'>洗车店图片</view>
+  <view wx:if="{{thumb===''}}"  class='thumb' bindtap='upimg'>点击上传</view>
+  <image wx:if="{{thumb!==''}}" src='http://cx.bjlingdi.com{{thumb}}' class='thumb' bindtap='upimg'></image>
 
   <button class='submitbtn' bindtap='saveGasStation'>提交</button>
 </view>

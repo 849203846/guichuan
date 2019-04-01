@@ -18,13 +18,13 @@ App({
           this.GetuserInfo(res.data.data)
         },rej=>{
           wx.showModal({
-            title: '123',
-            content: JSON.parse(rej),
+            title: '错误提示',
+            content: JSON.stringify(rej),
           })
         }).catch(e=>{
           wx.showModal({
-            title: '111',
-            content: '222',
+            title: '错误提示',
+            content: JSON.stringify(e),
           })
         });
       },
