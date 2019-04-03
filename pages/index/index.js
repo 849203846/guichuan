@@ -9,6 +9,55 @@ Page({
     motto: '123',
     car_color: '',
     car_register: '点击选择日期',
+    sendcode:'获取验证码'
+  },
+  SaveCode: function (e) {
+    this.setData({
+      code: e.detail.value
+    })
+  },
+  sendCode: function () {
+    if (this.data.sendcode !== '获取验证码') return;
+    let data = {
+      marker: 1,
+      phone: this.data.mobile,
+    }
+    if (data.phone == '' || data.phone.length !== 11) {
+      wx.showModal({
+        title: '温馨提示',
+        content: '请输入正确手机号',
+        showCancel: false
+      })
+    }
+    feach('/api/Base/sendCode', 'get', data).then(res => {
+      console.log(res.data)
+      if (res.data.code == 0) {
+        let timernum = 120
+        this.setData({
+          sendcode: '已发送(120)'
+        })
+        clearInterval(timer)
+        let timer = setInterval(() => {
+          --timernum
+          if (timernum <= 0) {
+            this.setData({
+              sendcode: '获取验证码'
+            })
+            clearInterval(timer);
+            return;
+          }
+          this.setData({
+            sendcode: '已发送(' + timernum + ')'
+          })
+        }, 1000)
+        return;
+      }
+      wx.showModal({
+        title: '温馨提示',
+        content: res.data.msg,
+        showCancel: false
+      })
+    })
   },
   onLoad:function(){
     feach('/api/Driver/getDriverStatus','get',{})
@@ -103,6 +152,7 @@ Page({
       car_own: this.data.car_own,
       car_color: this.data.car_color,
       car_register: this.data.car_register,
+      code: this.data.code,
     }
     if (!data.realname) {
       this.alert('车主姓名')

@@ -12,7 +12,7 @@ Page({
     car_img:'/public/utilImg/06.png'
   },
 
-onLoads:function(){
+onLoad:function(){
   feach('/api/Driver/getDriverStatus', 'get', {})
   .then(res=>{
     if(res.data.data.status === '0'){
@@ -45,10 +45,11 @@ onLoads:function(){
 UPimg:function(e){
   let url = e.target.dataset.datacontent,that = this
   wx.chooseImage({
+    count:1,
     success(res) {
       const tempFilePaths = res.tempFilePaths
       wx.uploadFile({
-        url: 'https://cx.bjlingdi.com/api/Upload/doUpload', // 仅为示例，非真实的接口地址
+        url: 'https://cx.bjlingdi.com/api/Upload/doUpload',
         filePath: tempFilePaths[0],
         name: 'myfile',
         formData: {

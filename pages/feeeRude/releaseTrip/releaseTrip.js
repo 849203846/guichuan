@@ -10,6 +10,7 @@ Page({
   onLoad(opc) {
     let time = new Date();
     this.setData({
+      phone: opc.phone,
       go_Date: time.getFullYear() + '-' + (time.getMonth() + 1) + '-' + time.getDate(),
       go_time: time.getHours() + ':' + time.getMinutes()
     })
@@ -104,49 +105,6 @@ Page({
     })
 
   },
-  sendCode:function(){
-    if (this.data.sendcode !== '获取验证码') return;
-    let data = {
-        marker:1,
-        phone:this.data.phone,
-    }
-    if (data.phone == '' || data.phone.length!==11){
-      wx.showModal({
-        title: '温馨提示',
-        content: '请输入正确手机号',
-        showCancel:false
-      })
-    }
-    feach('/api/Base/sendCode','get',data)
-    .then(res=>{
-      if (res.data.code == 0) {
-        let timernum = 120
-        this.setData({
-          sendcode: '已发送(120)'
-        })
-        clearInterval(timer)
-        let timer = setInterval(() => {
-          --timernum
-          if (timernum <= 0) {
-            this.setData({
-              sendcode: '获取验证码'
-            })
-            clearInterval(timer);
-            return;
-          }
-          this.setData({
-            sendcode: '已发送(' + timernum + ')'
-          })
-        }, 1000)
-        return;
-      }
-      wx.showModal({
-        title: '温馨提示',
-        content: res.data.msg,
-        showCancel: false
-      })
-    })
-  },
 submit:function(){
   let data = {
     start: this.data.start,
@@ -156,7 +114,6 @@ submit:function(){
     marker: this.data.marker,
     price: this.data.price,
     mobile: this.data.phone,
-    code: this.data.code,
     start_longitude: this.data.startLongitude,
     start_latitude: this.data.startLatitude,
     end_longitude: this.data.EndLongitude,
@@ -187,5 +144,10 @@ SaveTime:function(e){
   this.setData({
     go_time:e.detail.value
   })
-}
+  }, SaveDate: function (e) {
+    console.log(e.detail.value)
+    this.setData({
+      go_Date: e.detail.value
+    })
+  },
 })

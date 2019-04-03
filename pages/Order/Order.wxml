@@ -1,0 +1,12 @@
+  <view class='top'>
+    <view class="approval-btn-left {{tabFlag==1?'tabflag':''}}" data-tab="1" bindtap='tab'>会员审核</view>
+    <view class="approval-btn-left {{tabFlag==6?'tabflag':''}}" data-tab="6" bindtap='tab'>车主认证</view>
+  </view>
+  <block wx:for="{{list}}" wx:key="{{item.id}}">
+<view class='item'>
+  <view>订单号：{{item.order_num}}</view>
+  <view>支付时间：{{item.paytime}}</view>
+  <view>手机号：{{item.phone}}</view>
+  <view class='price'>{{item.price}}￥</view>
+</view>
+</block>

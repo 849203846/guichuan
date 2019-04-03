@@ -30,6 +30,11 @@ Page({
             showCancel: false,
           })
           break;
+          case '3':
+          this.setData({
+            phone: res.data.data.mobile
+          })
+          break;
           case '2':
           wx.showModal({
             title: '温馨提示',

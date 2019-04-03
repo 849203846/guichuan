@@ -1,4 +1,5 @@
 // pages/login/login.js
+const app =getApp();
 import {
   feach
 } from '../../utils/util.js'
@@ -29,18 +30,47 @@ Page({
     }
     feach('/admin/Login/loginOn', 'post', data)
       .then(res => {  
-        console.log(res)
-        if (res.data.code) {
-          wx.showModal({
-            title: '微信提示',
-            content: res.data.msg,
-            showCancel: false
+        console.log(res.data.data.type)
+        if (res.data.data&&res.data.data.type==='4'){
+          //登录洗车店
+          app.globalData.cid = res.data.data.cid
+          console.log(app.globalData)
+          wx.navigateTo({
+            url: '../CRMcarwash/CRMcarwash',
           })
-        }else{
+          return;
+
+        }else if(res.data.data&&res.data.data.type==='3'){
+          //登录加油站
+          app.globalData.cid = res.data.data.cid
+          console.log(app.globalData )
+          wx.navigateTo({
+            url: '../CRMgasstation/CRMgasstation',
+          })
+          return;
+        }else if(res.data.data&&res.data.data.type==='1'){
+          //超级用户
           wx.redirectTo({
             url: '../approvalList/approvalList',
           })
+          return;
+        }else{
+          wx.showModal({
+            title: '温馨提示',
+            content: '账号或密码不存在',
+          })
         }
+        // if (res.data.code) {
+        //   wx.showModal({
+        //     title: '微信提示',
+        //     content: res.data.msg,
+        //     showCancel: false
+        //   })
+        // }else{
+        //   wx.redirectTo({
+        //     url: '../approvalList/approvalList',
+        //   })
+        // }
       })
   },
   usernameInput(e) {

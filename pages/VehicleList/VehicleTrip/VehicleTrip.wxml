@@ -50,7 +50,7 @@
 <test class="left-title">手机号：</test>
 <input value="{{phone}}" maxlength='11' disabled='{{status===1}}' placeholder='请输入手机号' bindinput='Savephone'></input>
 </view>
-<view class='top-input' wx:if="{{status===2}}">
+<view class='top-input' wx:if="{{status==2}}">
 <test class="left-title">验证码：</test>
 <input placeholder='请输入短信验证码' bindinput='SaveCode'></input>
 <test class="sendCode" bindtap="sendCode">{{sendcode}}</test>

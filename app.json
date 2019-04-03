@@ -1,11 +1,16 @@
 {
   "pages": [
-    "pages/login/login",
-    "pages/approvalList/approvalList",
-    "pages/VehicleOwner/VehicleOwner",
-    "pages/VehicleList/VehicleList",
-    "pages/feeeRude/feeeRude",
+            "pages/login/login",
+"pages/VehicleOwner/VehicleOwner",
+
+      "pages/VehicleList/VehicleList",
     "pages/index/index",
+    "pages/feeeRude/feeeRude",
+
+    "pages/Order/Order",
+    "pages/approvalList/approvalList",
+   "pages/CRMgasstation/CRMgasstation",
+   "pages/CRMcarwash/CRMcarwash",
     "pages/VehicleList/VehicleTrip/VehicleTrip",
     "pages/VehicleList/detail/detail",
     "pages/feeeRude/releaseTrip/releaseTrip",

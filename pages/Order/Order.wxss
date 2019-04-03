@@ -1,0 +1,32 @@
+.top{
+  width: 100%;
+  display: flex;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.approval-btn-left{
+  display: inline-block;
+  flex:1;
+  height: 60rpx;
+  line-height: 60rpx;
+}.tabflag{
+  background: #4a4d5b;
+  color:white;
+  background: #bababa
+}
+.item{
+  width: 99.5%;
+  margin: 10rpx auto;
+  position:relative;
+  border-bottom: 1px solid #bababa;
+  
+}
+.price{
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+}

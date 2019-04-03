@@ -1,0 +1,23 @@
+.item{
+  width: 99.5%;
+  margin: 10rpx auto;
+  position:relative;
+  border-bottom: 1px solid #bababa;
+  
+}
+.price{
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+}
+.navto{
+  height: 88rpx;
+  text-align: center;
+  color: white;
+  background: #4a4d5b;
+  line-height: 88rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

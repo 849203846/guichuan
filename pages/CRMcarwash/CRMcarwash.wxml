@@ -1,0 +1,11 @@
+<block wx:for="{{list}}" wx:key="{{item.id}}">
+<view class='item'>
+  <view>订单号：{{item.order_num}}</view>
+  <view>支付时间：{{item.paytime}}</view>
+  <view>手机号：{{item.phone}}</view>
+  <view class='price'>{{item.price}}￥</view>
+</view>
+</block>
+
+<view style='height:88rpx;'></view>
+<navigator class='navto' url='../Carwash/Carwash?id={{cid}}'>设置</navigator>

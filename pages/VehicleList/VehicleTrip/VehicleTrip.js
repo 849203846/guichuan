@@ -130,7 +130,7 @@ Page({
   sendCode: function() {
     if (this.data.sendcode !== '获取验证码') return;
     let data = {
-      marker: 2,
+      marker: 3,
       phone: this.data.phone,
     }
     if (data.phone == '' || data.phone.length !== 11) {

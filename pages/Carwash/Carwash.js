@@ -107,6 +107,10 @@ Page({
     if (this.data.OilList.length === 1 && this.data.OilList[0].carwash_type === '') {
       return;
     }
+    wx.showLoading({
+      title: '保存中',
+      mask:true
+    })
     let data = {
       name: this.data.name,
       address: this.data.address,
@@ -117,24 +121,29 @@ Page({
       phone: this.data.phone, 
       product:JSON.stringify(this.data.OilList),
     }
-    console.log(data);
     if (!data.name) {
       this.alert('请输入名称')
+      wx.hideLoading();
       return
     } else if (!data.address) {
       this.alert('请输入地址')
+      wx.hideLoading();
       return
     } else if (!data.longitude) {
       this.alert('请定位店铺位置')
+      wx.hideLoading();
       return
     } else if (!data.description) {
       this.alert('请输入店铺描述')
+      wx.hideLoading();
       return
     } else if (!data.thumb){
       this.alert('请上传图片')
+      wx.hideLoading();
       return;
     } else if (!data.phone||data.phone.length!==11){
       this.alert('请输入手机号');
+      wx.hideLoading();
       return;
       }
       if(this.data.id){
@@ -143,6 +152,7 @@ Page({
     feach('/admin/Carwash/saveCarwash', 'post', data)
       .then(res => {
         console.log(res)
+        wx.hideLoading();
         if (res.data.code === 0) {
           wx.showModal({
             title: '温馨提示',
