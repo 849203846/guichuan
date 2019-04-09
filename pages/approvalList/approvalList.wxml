@@ -17,6 +17,7 @@
   <view class='footer'>
     <navigator url='../CRMGasStationList/CRMGasStationList'>+加油站</navigator>
     <navigator url='../Order/Order'>实时订单</navigator>
+    <navigator url='../CRMpay/CRMpay'>充值</navigator>
     <navigator url='../CRMCarwashList/CRMCarwashList'>+洗车店</navigator>
   </view>
 </view>

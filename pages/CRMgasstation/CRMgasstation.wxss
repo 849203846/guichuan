@@ -21,3 +21,16 @@
   left: 0;
   width: 100%;
 }
+.toptitle{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #bababa;
+  height: 66rpx;
+  line-height: 66rpx;
+  font-size: 12px;
+  padding-left: 10rpx;
+  width:100%;
+  z-index: 99;
+  overflow: hidden;
+}

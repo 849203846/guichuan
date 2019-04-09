@@ -1,0 +1,26 @@
+<view>
+  <view class='top'>
+    <view class="approval-btn-left {{tabFlag==1?'tabflag':''}}" data-tab="1" bindtap='tab'>会员审核</view>
+    <view class="approval-btn-left {{tabFlag==2?'tabflag':''}}" data-tab="2" bindtap='tab'>车主认证</view>
+  </view>
+</view>
+<radio-group class="radio-group" bindchange="radioChange">
+  <label class="radio" wx:for="{{list}}">
+  <view class='item'>
+    <radio value="{{item.id}}" checked="{{item.checked}}" />
+    <text>{{item.name}}</text>
+    </view>
+  </label>
+</radio-group>
+
+
+<view bindtap='showpay' class='openpay'>充值</view>
+
+
+<view class='pay' catchtap='closepay' style='display:{{flag}}'>
+  <view class='paybox' catchtap='openpay'>
+    <view class='title'>充值</view>
+    <input value='{{pay}}' class='payinput' type='number' bindinput='savepay' placeholder='请输入充值金额'></input>
+    <view class='paybtn' catchtap='submit'>充值</view>
+  </view>
+</view>

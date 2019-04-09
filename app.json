@@ -6,7 +6,7 @@
       "pages/VehicleList/VehicleList",
     "pages/index/index",
     "pages/feeeRude/feeeRude",
-
+    "pages/CRMpay/CRMpay",
     "pages/Order/Order",
     "pages/approvalList/approvalList",
    "pages/CRMgasstation/CRMgasstation",

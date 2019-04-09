@@ -21,13 +21,14 @@ Page({
     this.getList(data);
   },
   getList: function (data) {
-    feach('/api/Person/getCarwashOrderList', 'get', data)
+    feach('/admin/Carwash/getCarwashOrderList', 'get', data)
       .then(res => {
         wx.hideLoading()
         if (res.data.data.list) {
           this.setData({
             page: data.page,
-            list: res.data.data.list
+            list: res.data.data.list,
+            price: res.data.data.price
           })
         } else {
           this.setData({

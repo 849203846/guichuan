@@ -23,9 +23,9 @@ Page({
       page:1,
     },url;
     if (tabFlag === '1'){
-      url = '/api/Person/getGasstationOrderList'
+      url = '/admin/Gasstation/getGasOrderList'
     }else{
-      url = '/api/Person/getCarwashOrderList'
+      url = '/admin/Carwash/getCarwashOrderList'
     }
     feach(url,'get',data)
     .then(res=>{
