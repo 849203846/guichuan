@@ -77,6 +77,13 @@ Page({
           },
           fail(res) { }
         })
+      }else{
+        wx.hideLoading();
+        wx.showModal({
+          title: '温馨提示',
+          content: res.data.msg,
+          showCancel:false
+        })
       }
     })
   }

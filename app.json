@@ -1,8 +1,9 @@
 {
   "pages": [
+
             "pages/login/login",
 "pages/VehicleOwner/VehicleOwner",
-
+        "pages/CarwashList/CarwashList",
       "pages/VehicleList/VehicleList",
     "pages/index/index",
     "pages/feeeRude/feeeRude",
@@ -21,7 +22,7 @@
     "pages/detailsMsg/detailsMsg",
     "pages/GasStation/GasStation",
     "pages/Carwash/Carwash",
-    "pages/CarwashList/CarwashList",
+
     "pages/GasStationList/GasStationList",
     "pages/CarwashData/CarwashData",
     "pages/GasstationData/GasstationData",

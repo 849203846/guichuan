@@ -1,6 +1,6 @@
   <view class='top'>
-    <view class="approval-btn-left {{tabFlag==1?'tabflag':''}}" data-tab="1" bindtap='tab'>会员审核</view>
-    <view class="approval-btn-left {{tabFlag==6?'tabflag':''}}" data-tab="6" bindtap='tab'>车主认证</view>
+    <view class="approval-btn-left {{tabFlag==1?'tabflag':''}}" data-tab="1" bindtap='tab'>加油站</view>
+    <view class="approval-btn-left {{tabFlag==6?'tabflag':''}}" data-tab="6" bindtap='tab'>洗车店</view>
   </view>
   <block wx:for="{{list}}" wx:key="{{item.id}}">
 <view class='item'>

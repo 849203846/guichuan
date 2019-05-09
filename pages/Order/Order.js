@@ -21,6 +21,7 @@ Page({
     let tabFlag = this.data.tabFlag,data = {
       status:2,
       page:1,
+      gid:'all'
     },url;
     if (tabFlag === '1'){
       url = '/admin/Gasstation/getGasOrderList'

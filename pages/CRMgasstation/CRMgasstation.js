@@ -14,7 +14,7 @@ Page({
   },
   onShow: function () {
     let data = {
-      sid: app.globalData.cid,
+      gid: app.globalData.cid,
       page:1,
       status:2,
     }
