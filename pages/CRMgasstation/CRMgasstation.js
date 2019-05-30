@@ -24,11 +24,13 @@ getList:function(data){
   feach('/admin/Gasstation/getGasOrderList','get',data)
   .then(res=>{
     wx.hideLoading();
+    this.setData({
+      price: res.data.data.price
+    })
     if(res.data.data.list){
       this.setData({
         page: data.page,
         list:res.data.data.list,
-        price: res.data.data.price
       })
     }else{
       this.setData({
@@ -45,7 +47,7 @@ getList:function(data){
       mask: true,
     })
     let data = {
-      sid: app.globalData.cid,
+      gid: app.globalData.cid,
       page: 1,
       status: 2,
     }
@@ -58,7 +60,7 @@ getList:function(data){
     })
     let page = this.data.page + 1
     let data = {
-      sid: app.globalData.cid,
+      gid: app.globalData.cid,
       page,
       status: 2,
     }

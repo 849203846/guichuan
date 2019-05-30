@@ -61,6 +61,7 @@ Page({
           signType: res.data.data.signType,
           paySign: res.data.data.paySign,
           success(resdata) {
+            wx.hideLoading();
             if (resdata.errMsg === "requestPayment:ok") {
               wx.hideLoading();
               wx.showModal({
@@ -75,7 +76,9 @@ Page({
               })
             }
           },
-          fail(res) { }
+          fail(res) {
+            wx.hideLoading();
+           }
         })
       }else{
         wx.hideLoading();

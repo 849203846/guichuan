@@ -21,22 +21,36 @@ Page({
     })
   },
   radioChange(e) {
+    let gid = e.detail.value.split('=')[0]
+    let tabFlag = e.detail.value.split('=')[1]
     this.setData({
-      gid:e.detail.value
+      gid,
+      tabFlag,
     })
-    console.log('radio发生change事件，携带value值为：', e.detail.value)
   },
   onShow:function(){
     let data = {
       page: this.data.page,
-    }, url = this.data.tabFlag == 1 ? '/admin/Gasstation/getGasStationList' : '/admin/Carwash/getCarwashList';
+    }, 
+    // url = this.data.tabFlag == 1 ? '/admin/Gasstation/getGasStationList' : '/admin/Carwash/getCarwashList';
+      url = '/admin/Gasstation/getGasStationList'
     feach(url, 'get', data)
       .then(res => {
         res.data.data.list[0].checked = true
-        this.setData({
-          list: res.data.data.list,
-          gid:res.data.data.list[0].id
+        res.data.data.list.map(item=>{
+          item.tabFlag = 1
         })
+        url = '/admin/Carwash/getCarwashList'
+        feach(url, 'get', data)
+          .then(re => {
+            re.data.data.list.map(item => {
+              item.tabFlag = 2
+            })
+            this.setData({
+              list: [...res.data.data.list, ...re.data.data.list],
+              gid: res.data.data.list[0].id
+            })
+          })
       })
   },
   showpay:function(){
@@ -73,6 +87,7 @@ Page({
             this.setData({
               pay:''
             })
+            this.onShow();
           }
         })
       }else{

@@ -14,10 +14,10 @@
       <view class='top-center-name'>油号</view>
     </view>
     <view class='top-center'>
-      <view class='top-center-name'>优惠价</view>
+      <view class='top-center-name'>指导价</view>
     </view>
     <view class='top-right'>
-      <view class='top-right-name'>指导价</view>
+      <view class='top-right-name'>优惠价</view>
     </view>
   </view>
   <block wx:for="{{product}}">
@@ -36,7 +36,7 @@
   </block>
   <view class='top-line'></view>
   <view class='top-msg-title'>
-    <view class='top-msg-title-left top-msg-item'>洗车站详情</view>
+    <view class='top-msg-title-left top-msg-item'>商家详情</view>
     <!-- <view class='top-msg-title-center'>车友印象</view> -->
     <!-- <view class='top-msg-title-right'>实时订单</view> -->
   </view>

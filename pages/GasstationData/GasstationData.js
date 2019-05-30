@@ -73,6 +73,7 @@ Page({
           signType: res.data.data.signType,
           paySign: res.data.data.paySign,
           success(res_2) {
+            wx.hideLoading();
             if (res_2.errMsg === "requestPayment:ok") {
               wx.showModal({
                 title: '请于商家核对订单号',
@@ -86,7 +87,9 @@ Page({
               })
             }
           },
-          fail(res) { }
+          fail(res) { 
+            wx.hideLoading();
+          }
         })
       })
 

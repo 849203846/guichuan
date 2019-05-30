@@ -27,11 +27,11 @@
   <block wx:for="{{OilList}}" wx:key="{{index}}" wx:item="item" wx:index="index">
     <view class='top-input oilprice'>
       <text>车型:</text>
-      <input bindinput='SaveCar_brand' value='{{item.carwash_type}}' placeholder-class='oilclass' data-index='{{index}}' bindinput='SaveGasoline_type' placeholder='例：SUV'></input>
+      <input value='{{item.carwash_type}}' placeholder-class='oilclass' data-index='{{index}}' bindinput='SaveGasoline_type' placeholder='例：SUV'></input>
       <text>原价:</text>
-      <input bindinput='SaveCar_brand' value='{{item.real_price}}' type='number' bindinput='SaveReal_price' data-index='{{index}}'  placeholder-class='oilclass' placeholder='例：7'></input>
+      <input value='{{item.original_price}}' type='digit' bindinput='SaveOriginal_price' data-index='{{index}}'  placeholder-class='oilclass' placeholder='例：7'></input>
       <text>元，优惠价:</text>
-      <input bindinput='SaveCar_brand' value='{{item.original_price}}' type='number' bindinput='SaveOriginal_price' data-index='{{index}}'   placeholder-class='oilclass' placeholder='例：6.11'></input>
+      <input value='{{item.real_price}}' type='digit' bindinput='SaveReal_price' data-index='{{index}}'   placeholder-class='oilclass' placeholder='例：6.11'></input>
       <text>元</text>
         <text bindtap='delOilList' data-index='{{index}}'>㊀</text>
     </view>

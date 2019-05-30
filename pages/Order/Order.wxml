@@ -5,7 +5,7 @@
   <block wx:for="{{list}}" wx:key="{{item.id}}">
 <view class='item'>
   <view>订单号：{{item.order_num}}</view>
-  <view>支付时间：{{item.paytime}}</view>
+  <view>支付时间：{{item.paytime||'未支付'}}</view>
   <view>手机号：{{item.mobile}}</view>
   <view>车牌号：{{item.car_num}}</view>
   <view class='price'>{{item.price}}￥</view>

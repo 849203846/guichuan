@@ -1,14 +1,15 @@
 <view>
-  <view class='top'>
+  <!-- <view class='top'>
     <view class="approval-btn-left {{tabFlag==1?'tabflag':''}}" data-tab="1" bindtap='tab'>加油站商铺</view>
     <view class="approval-btn-left {{tabFlag==2?'tabflag':''}}" data-tab="2" bindtap='tab'>洗车店商铺</view>
-  </view>
+  </view> -->
 </view>
 <radio-group class="radio-group" bindchange="radioChange">
   <label class="radio" wx:for="{{list}}">
-  <view class='item'>
-    <radio value="{{item.id}}" checked="{{item.checked}}" />
+  <view class='item' >
+    <radio value="{{item.id+'='+item.tabFlag}}"  checked="{{item.checked}}" />
     <text>{{item.name}}</text>
+    <text style='float:right;'>剩余{{item.total_price}}元</text>
     </view>
   </label>
 </radio-group>

@@ -22,7 +22,7 @@
 
     <view class='first-one car-number'>
       <test>乘车价格：</test>
-      <input type='number' placeholder="{{carnum?carnum:'请输入可接受价格'}}" bindinput='SavePrice'></input>
+      <input type='digit' placeholder="{{carnum?carnum:'请输入可接受价格'}}" bindinput='SavePrice'></input>
     </view>
  
   <view class='first-one car-number'>
